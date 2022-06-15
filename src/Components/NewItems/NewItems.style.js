@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const HomeNewItemsContainer = styled.div`
-margin-top:3.5rem;
+margin-top:1rem;
 
 h2 {
     font-size:1.3rem;
@@ -39,40 +39,43 @@ export const ItemBox = styled.div`
  `
  export const Love = styled.span`
     position:absolute;
-    left:0;
-    top:0;
+    right:0px;
+    top:0px;
     z-index:1;
-    border-radius:50%;
     display:flex;
     justify-content:center;
     align-items:center;
-    background-color:${(prop)=>prop.theme.colors.btnSecond};
     padding:.5rem;
-    color:${(prop)=>prop.theme.colors.white};
+    font-size:2rem;
+    color:#f90202;
  `
  export const ItemText = styled.div`
- font-family:'m';
- position:relative;
- padding:1rem .2rem;
-    button{
-        display:flex;
-        justify-content:center;
-        align-items:center;
-        position:absolute;
-        bottom:0;
-        right:0;
-        ouline:none;
-        border:none;
-        background-color:${(prop)=>prop.theme.colors.box};
-        padding:.5rem;
-        color:${(prop)=>prop.theme.colors.white};
-        border-radius:.4rem;
-        white-space:nowrap;
-        text-overflow:ellipsis;
-        font-size:1.3rem;
-    }
+   font-family: 'm';
+   position: relative;
+   padding: 1rem 0.4rem;
+   display: grid;
+   grid-template-columns: 1fr 55px;
+   gap: 1rem;
+   
+
+    
     div {
     text-align:left;
+      div {
+         display:flex;
+         align-items:center;
+    
+         .icon {
+            font-size:1.5rem;
+            margin-right:5px;
+         }
+      }
+      .star {
+         color:blue;
+      }
+      .like {
+         color:green;
+      }
 
     }
     div h3 {
@@ -80,9 +83,15 @@ export const ItemBox = styled.div`
     color:${(prop)=>prop.theme.colors.supTitle};
     }
     div p {
-    font-size:.8rem;
-    color:${(prop)=>prop.theme.colors.p};
+      font-size:.8rem;
+      color:${(prop)=>prop.theme.colors.p};
     }
-
-
+ `
+ export const AddIcon = styled.div`
+    position:absolute;
+    bottom:0;
+    right:0;
+    font-size:1.8rem;
+    padding:.3rem;
+    color:${(prop)=>prop.theme.colors.black};
  `
