@@ -32,7 +32,7 @@ export const ItemBox = styled.div`
    img{
       border-radius:.5rem;
       overflow:hidden;
-      width:330px;
+      width:100%;
       
    }
 
