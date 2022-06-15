@@ -80,6 +80,7 @@ img {
 export const Bollets = styled.div`
  display:flex;
  justify-content:center;
+ margin-top:6px;
     li {
         list-style:none;
         height: 5px;
