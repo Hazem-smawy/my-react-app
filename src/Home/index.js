@@ -1,49 +1,26 @@
-import {Container,Header,Logo,App,TextTitle,Categories,CatItem} from './Home.styles'
-import {RiApps2Line,RiMagicLine} from 'react-icons/ri'
-import {SiToyota,SiBmw,SiMercedes,SiTesla,SiRenault} from 'react-icons/si'
-import { NavLink } from 'react-router-dom' 
+import {Container,TextTitle} from './Home.styles'
+import Header from '../Components/Header/index'
 import NewItems from '../Components/NewItems/NewItems'
+import  Category  from '../Components/CatItms'
 import  Slide  from '../Components/SlideBox'
+import {useState} from 'react'
 const Home = () => {
-
-  
+  const [closeSideBar,setCloseSideBar]= useState(false);
   return (
     <>
-     <Header>
-            <Logo>
-                <RiMagicLine />
-            </Logo>
-            <App>
-                <RiApps2Line />
-            </App>
-      </Header>
-       <Container>
-        
+    <Header isClose={closeSideBar} setIsClose={setCloseSideBar} />
+      <Container onClick={()=> closeSideBar  && setCloseSideBar(false)}
+      className={closeSideBar ?"active":" "}>
+          
           <TextTitle>
             <h2>Descover</h2>
             <p>All Your Fav is Here</p>
           </TextTitle>
-          <Categories>
-                <CatItem >
-                  <SiBmw />
-                </CatItem>
-                <CatItem >
-                  <SiMercedes />
-                </CatItem>
-                <CatItem >
-                  <SiTesla />
-                </CatItem>
-                <CatItem >
-                  <SiToyota />
-                </CatItem>
-                <CatItem >
-                  <SiRenault />
-                </CatItem>
-              
-          </Categories>
+         <Category />
           <Slide />
           <NewItems />
-      </Container>
+          
+      </Container> 
     </>
   )
 }
