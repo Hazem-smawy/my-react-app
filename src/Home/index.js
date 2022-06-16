@@ -1,4 +1,5 @@
 import {Container,TextTitle} from './Home.styles'
+import Spinner from '../Components/Spinner/index'
 import Header from '../Components/Header/index'
 import NewItems from '../Components/NewItems/NewItems'
 import  Category  from '../Components/CatItms'
@@ -6,11 +7,12 @@ import  Slide  from '../Components/SlideBox'
 import {useState} from 'react'
 const Home = () => {
   const [closeSideBar,setCloseSideBar]= useState(false);
+ 
   return (
     <>
     <Header isClose={closeSideBar} setIsClose={setCloseSideBar} />
       <Container onClick={()=> closeSideBar  && setCloseSideBar(false)}
-      className={closeSideBar ?"active":" "}>
+      className={closeSideBar ? "active":" "}>
           
           <TextTitle>
             <h2>Descover</h2>

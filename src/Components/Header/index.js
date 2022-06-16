@@ -1,25 +1,28 @@
 import  {HeaderContent,Logo,App,SideBar} from './Header.style'
-import {RiApps2Line,RiMagicLine} from 'react-icons/ri'
 import Img from '../../assets/images/about.jpg'
 import Img1 from '../../assets/images/testimonial1.jpg'
 import Img2 from '../../assets/images/testimonial2.jpg'
 import Img3 from '../../assets/images/testimonial3.jpg'
 import {MdAdd} from 'react-icons/md'
-import { useState } from 'react'
+import {GoHome} from 'react-icons/go'
+import {GiSettingsKnobs} from 'react-icons/gi'
+import {AiOutlineCreditCard} from 'react-icons/ai'
+import {MdElectricCar,MdLogin,MdLogout} from 'react-icons/md'
+import {IoMdClose} from 'react-icons/io'
+import {FaFirefox} from 'react-icons/fa'
+import {VscClose} from 'react-icons/vsc'
+import {CgMenuRight} from 'react-icons/cg'
 const Header = ({isClose,setIsClose}) => {
-  
-    
-  
-   
   return (
     <HeaderContent>
         <Logo>
-            <RiMagicLine />
+            <FaFirefox />
         </Logo>
         <App>
-            <RiApps2Line onClick={()=>(
-                isClose ? setIsClose(false):setIsClose(true)
-            )} />
+           
+             <CgMenuRight className={ isClose && 'open'} onClick={()=> setIsClose(true) } />
+             <IoMdClose className={ !isClose && 'open'}  onClick={()=> setIsClose(false)} />
+           
             <SideBar className={ isClose ?'active':''} >
                 <ul>
                     <div className='user'>
@@ -30,24 +33,24 @@ const Header = ({isClose,setIsClose}) => {
                         </div>
                     </div>
                     <li>
-                        <RiMagicLine />
+                        <GoHome />
                         <span>Home</span>
                     </li>
                     <li>
-                        <RiMagicLine />
-                        <span>cart</span>
+                        <AiOutlineCreditCard />
+                        <span>card</span>
                     </li>
                     <li>
-                        <RiMagicLine />
+                        <MdElectricCar />
                         <span>new</span>
                     </li>
                     <li>
-                        <RiMagicLine />
+                        <MdLogin />
                         <span>log in</span>
                     </li>
                     <li>
-                        <RiMagicLine />
-                        <span>Home</span>
+                        <GiSettingsKnobs />
+                        <span>settings</span>
                     </li>
                     <div className='fav'>
                        <div>
@@ -69,7 +72,7 @@ const Header = ({isClose,setIsClose}) => {
                        </button>
                     </div>
                     <li className='logOut'>
-                        <RiMagicLine />
+                        <MdLogout />
                         <span>log out</span>
                     </li>
                 </ul>

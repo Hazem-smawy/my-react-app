@@ -11,15 +11,24 @@ export const HeaderContent = styled.header`
     
 `
 export const Logo = styled.div`
-padding:.5rem;
-border-radius:.5rem;
+padding: 0.5rem;
+border-radius: 0.3rem;
+width: 40px;
+height: 40px;
 background-color:${(prop)=>prop.theme.colors.boxSecond};
 
 `
 export const App = styled.nav`
-padding:.5rem;
-border-radius:.5rem;
-background-color:${(prop)=>prop.theme.colors.boxSecond};
+    padding: 0.5rem;
+    border-radius: 0.3rem;
+    background-color: #eee;
+    width: 40px;
+    height: 40px;
+    background-color:${(prop)=>prop.theme.colors.boxSecond};
+
+    .open {
+        display:none;
+    }
 
 `
 export const SideBar = styled.div`
@@ -96,7 +105,7 @@ export const SideBar = styled.div`
             &.logOut {
                 position:absolute;
 
-                bottom:1.5rem;
+                bottom:2.5rem;
                 color:red;
             }
     
