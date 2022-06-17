@@ -1,5 +1,6 @@
 import {Bollets,SlidersBox,FirstCol,Sliders,Slide,SlideImage,TextBox} from './Slide.style'
 import image from '../../assets/images/fer.jpg'
+import { Link } from 'react-router-dom'
 const index = () => {
     let links =[
         {id:1,name:'Fav'},
@@ -11,14 +12,20 @@ const index = () => {
             <FirstCol>
               <div>
                 <li >
-                  liked
+                  <Link to='/products'>
+                   liked
+                  </Link>
                 </li>
-                 <li>
+                <li >
+                  <Link to='/products'>
                    new
-                 </li>
-                 <li className='active'>
-                   famuas
-                 </li>
+                  </Link>
+                </li>
+                <li className='active' >
+                  <Link to='/products'>
+                   favo
+                  </Link>
+                </li>
               </div>
             </FirstCol>
             <Sliders>

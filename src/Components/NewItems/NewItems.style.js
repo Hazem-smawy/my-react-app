@@ -1,16 +1,6 @@
 import styled from 'styled-components'
 
-export const HomeNewItemsContainer = styled.div`
-margin-top:1rem;
 
-h2 {
-    font-size:1.3rem;
-    margin-bottom:1rem;
-    font-family:'c';
-    color:${(prop)=>prop.theme.colors.black};
-}
-
-`
 export const  ItemsContainer = styled.div`
 column-count: 1;
 column-gap: 1rem;
@@ -46,7 +36,7 @@ export const ItemBox = styled.div`
     justify-content:center;
     align-items:center;
     padding:.5rem;
-    font-size:2rem;
+    font-size:1.6rem;
     color:#f90202;
  `
  export const ItemText = styled.div`
@@ -66,8 +56,9 @@ export const ItemBox = styled.div`
          align-items:center;
     
          .icon {
-            font-size:1.5rem;
+            font-size:1rem;
             margin-right:5px;
+            margin-bottom:5px;
          }
       }
       .star {
@@ -77,6 +68,11 @@ export const ItemBox = styled.div`
          color:green;
       }
 
+    }
+    div h2 {
+      font-size:1.2rem;
+      font-weight:normal;
+      margin-bottom:5px;
     }
     div h3 {
     font-size:1rem;

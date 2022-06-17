@@ -2,6 +2,8 @@ import styled from "styled-components";
 
 export const ProductBox = styled.div`
     font-family:'c';
+    overflow: hidden;
+    margin-top: 1rem;
 `
 export const ImageBox = styled.div`
  position:relative;
@@ -9,6 +11,7 @@ export const ImageBox = styled.div`
  img {
      width:100%;
      border-radius:.5rem;
+     border-bottom-right-radius: 3rem;
  }
  &::before {
     content: '';
@@ -32,9 +35,15 @@ font-size: 1.5rem;
  color:${(prop)=>prop.theme.colors.black};
  span {
     padding:.5rem;
+    & > * {
+        outline: #ffffff7d 2px solid;
+        border-radius: 50%;
+        background:#ffffff7d;
+    }
+
  }
  span:last-child {
-     
+     ouline:none;
     border-bottom-left-radius: 1rem;
     background:${(prop)=>prop.theme.colors.boxSecond};
  }
@@ -51,6 +60,7 @@ export const NameLove = styled.div`
         font-weight:normal;
     }
     p {
+        font-size:1.5rem;
         color:${(prop)=>prop.theme.colors.first};
     }
 `
@@ -74,7 +84,7 @@ export const Related = styled.div`
  padding:1rem 0;
  img {
      margin-right:1rem;
-     width:50px;
+     width:100%;
      height:50px;
      border-radius:.3rem;
  }
@@ -103,6 +113,7 @@ h4 {
     flex:1;
 }
 button {
+    margin-right:1rem;
     flex:2;
     outline:none;
     border:none;

@@ -1,24 +1,19 @@
-import {HomeNewItemsContainer,ItemsContainer}from './NewItems.style'
+import {ItemsContainer}from './NewItems.style'
 import NewItem from './NewItem';
-import {cars} from '../../data'
-const NewItems = () => {
-  return (
-      <>
-       <HomeNewItemsContainer>
-           <h2>
-               new cars
-           </h2>
+import { Link } from 'react-router-dom';
+
+const NewItems = ({data}) => {
+  return ( 
            <ItemsContainer>
                 {
-                    cars.map(car=>(
-                        <NewItem key={car.id} data={car} />
+                    data.map(item=>(
+                      <Link to='/product' key={item.id} >
+                          <NewItem  item={item} />
+                      </Link>
+                       
                     ))
                 }
            </ItemsContainer>
-           
-        </HomeNewItemsContainer>
-      </>
-   
   )
 }
 

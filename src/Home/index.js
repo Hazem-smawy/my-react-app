@@ -1,26 +1,32 @@
-import {Container,TextTitle} from './Home.styles'
+import {Container,NewData,TextTitle} from './Home.styles'
 import Spinner from '../Components/Spinner/index'
 import Header from '../Components/Header/index'
 import NewItems from '../Components/NewItems/NewItems'
 import  Category  from '../Components/CatItms'
 import  Slide  from '../Components/SlideBox'
+import Footer from '../Components/Footer/Footer'
 import {useState} from 'react'
+import {cars} from '../data'
 const Home = () => {
   const [closeSideBar,setCloseSideBar]= useState(false);
  
   return (
     <>
-    <Header isClose={closeSideBar} setIsClose={setCloseSideBar} />
+      <Header isClose={closeSideBar} setIsClose={setCloseSideBar} />
       <Container onClick={()=> closeSideBar  && setCloseSideBar(false)}
-      className={closeSideBar ? "active":" "}>
+          className={closeSideBar ? "active":" "}>
           
           <TextTitle>
             <h2>Descover</h2>
             <p>All Your Fav is Here</p>
           </TextTitle>
-         <Category />
+          <Category />
           <Slide />
-          <NewItems />
+          <NewData>
+            <h3>new cars</h3>
+          </NewData>
+          <NewItems data={cars} />
+          <Footer />
           
       </Container> 
     </>

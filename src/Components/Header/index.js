@@ -12,6 +12,7 @@ import {IoMdClose} from 'react-icons/io'
 import {FaFirefox} from 'react-icons/fa'
 import {VscClose} from 'react-icons/vsc'
 import {CgMenuRight} from 'react-icons/cg'
+import { Link } from 'react-router-dom'
 const Header = ({isClose,setIsClose}) => {
   return (
     <HeaderContent>
@@ -45,8 +46,10 @@ const Header = ({isClose,setIsClose}) => {
                         <span>new</span>
                     </li>
                     <li>
-                        <MdLogin />
-                        <span>log in</span>
+                        <Link to='/login'>
+                            <MdLogin />
+                            <span>log in</span>
+                        </Link>
                     </li>
                     <li>
                         <GiSettingsKnobs />

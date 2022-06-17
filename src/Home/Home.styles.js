@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 export const Container = styled.div`
-    margin:0 auto;
-    
+    margin:0 auto;   
     width:90vw;
     padding:0 .5rem 0;
     background:${(prop)=>prop.theme.colors.bg};
@@ -25,4 +24,12 @@ export const TextTitle = styled.div`
             margin-left:.5rem;
         }
 
+`
+export const NewData = styled.div`
+h3 {
+    font-size:1.3rem;
+    margin-bottom:1rem;
+    font-family:'c';
+    color:${(prop)=>prop.theme.colors.black};
+}
 `

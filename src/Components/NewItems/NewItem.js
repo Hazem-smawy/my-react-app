@@ -2,31 +2,32 @@ import { ItemBox,ItemImage,ItemText,Love,AddIcon } from "./NewItems.style"
 import {MdAdd} from 'react-icons/md'
 import {AiOutlineLike,AiOutlineStar} from 'react-icons/ai'
 import {RiHeartFill} from 'react-icons/ri'
-const NewItem = ({data}) => {
+const NewItem = ({item}) => {
+  const {name,image,price ,description,rate,like} = item;
   return (
     <ItemBox>
         <Love>
           <RiHeartFill />
         </Love>
         <ItemImage>
-            <img src={data.image} alt={data.id} />
+            <img src={image} alt={name} />
         </ItemImage>
         <ItemText>
            <div>
-                <h3>{data.name}</h3>
-                <h2>$100</h2>
-
-                <p>{data.description}</p>
+                <h2>{name}</h2>
+                <h3>${price}</h3>
+                <br />
+                <p>{description}</p>
            </div>
            
            <div>
               <div className='star'>
                 <AiOutlineStar className="icon " />
-                <span>4.5</span>
+                <span>{rate}</span>
               </div>
               <div className="like">
-                <AiOutlineLike  className="icon like"/>
-                <span>100</span>
+                <AiOutlineLike  className="icon "/>
+                <span>{like}</span>
               </div>
            </div>
            <AddIcon>

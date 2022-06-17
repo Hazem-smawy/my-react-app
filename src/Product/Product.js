@@ -5,8 +5,10 @@ import {FaAngleLeft} from 'react-icons/fa'
 import {GiShoppingBag} from 'react-icons/gi'
 import {AiOutlineLike,AiOutlineStar} from 'react-icons/ai'
 import {RiHeartFill} from 'react-icons/ri'
-const Product = ({data}) => {
-    const {name,description,image,price,rate,like} = data[1];
+import { cars } from "../data"
+const Product = () => {
+
+    const {name,description,image,price,rate,like} = cars[3];
   return (
     <Container>
         <ProductBox>
@@ -37,7 +39,7 @@ const Product = ({data}) => {
         </Properaties>
         <Related>
             {
-                data.map((car)=>(
+                cars.map((car)=>(
                     <img key={car.id} src={car.image} alt ={car.name} />
                 ))
             }
