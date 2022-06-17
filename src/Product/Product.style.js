@@ -7,7 +7,7 @@ export const ProductBox = styled.div`
 `
 export const ImageBox = styled.div`
  position:relative;
-
+ margin-top:1rem;
  img {
      width:100%;
      border-radius:.5rem;
@@ -103,7 +103,8 @@ bottom:0;
 left:0;
 display:flex;
 justify-content:space-between;
-padding:1.5rem .5rem;
+
+padding: 1.5rem;
 font-family:'c';
 h4 {
     padding-right:.5rem;
