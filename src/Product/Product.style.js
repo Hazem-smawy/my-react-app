@@ -93,8 +93,8 @@ bottom:0;
 left:0;
 display:flex;
 justify-content:space-between;
-margin:0 1rem 0;
-padding:1.5rem .5rem;
+
+padding: 1.5rem;
 font-family:'c';
 h4 {
     padding-right:.5rem;
