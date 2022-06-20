@@ -38,10 +38,10 @@ flex-direction:column;
 color:${(prop)=>prop.theme.colors.black};
 
 h3 {
-    font-size:1.3rem;
+    font-size:1.1rem;
 }
 h4 {
-    font-size:1.2rem;
+    font-size:1rem;
     
 }
 
