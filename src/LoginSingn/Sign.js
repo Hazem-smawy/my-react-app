@@ -6,7 +6,8 @@ import {MdLogin,MdOutlineEmail,MdLockOutline,MdOutlinePhone} from 'react-icons/m
 import {FaAngleLeft} from 'react-icons/fa'
 import {GoSignIn} from 'react-icons/go'
 import {AiOutlineUser} from 'react-icons/ai'
-import {BsEyeSlash,BsEye} from 'react-icons/bs'
+import {BsEye} from 'react-icons/bs'
+import { Link } from 'react-router-dom'
 import Footer from '../Components/Footer/Footer'
 
 const Sign = () => {
@@ -14,13 +15,19 @@ const Sign = () => {
     <Container>
          <Title>
             <Icons>
+                <Link to='/'>
                     <span>
                         <FaAngleLeft />
                     </span>
+                </Link>
+                  
                     <h4>Sign</h4>
+                <Link to='/login'>
                     <span>
                         <MdLogin />
                     </span>
+                </Link>
+                  
                 </Icons>
         </Title>
         <FormContainer>
@@ -84,7 +91,9 @@ const Sign = () => {
         </Form>
         <Forget>
             <p>have account</p>
-            <p>login</p>
+            <Link to='/login'>
+                <p>login</p>
+            </Link>
         </Forget>
         </FormContainer>
         <Footer />

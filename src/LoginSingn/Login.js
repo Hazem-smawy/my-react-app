@@ -13,14 +13,19 @@ const Login = () => {
     <Container>
          <Title>
             <Icons>
+                <Link to='/'>
                     <span>
                         <FaAngleLeft />
                     </span>
+                </Link>
                     <h4>login</h4>
+                <Link to='/sign'>
                     <span>
                         <GoSignIn />
                     </span>
-                </Icons>
+                </Link>
+                   
+            </Icons>
         </Title>
         <FormContainer>
         <LoginText>

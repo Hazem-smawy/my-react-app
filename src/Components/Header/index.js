@@ -10,7 +10,6 @@ import {AiOutlineCreditCard} from 'react-icons/ai'
 import {MdElectricCar,MdLogin,MdLogout} from 'react-icons/md'
 import {IoMdClose} from 'react-icons/io'
 import {FaFirefox} from 'react-icons/fa'
-import {VscClose} from 'react-icons/vsc'
 import {CgMenuRight} from 'react-icons/cg'
 import { Link } from 'react-router-dom'
 const Header = ({isClose,setIsClose}) => {
@@ -34,12 +33,16 @@ const Header = ({isClose,setIsClose}) => {
                         </div>
                     </div>
                     <li>
+                     <Link to='/'>
                         <GoHome />
                         <span>Home</span>
+                     </Link>
                     </li>
                     <li>
+                      <Link to='/card'>
                         <AiOutlineCreditCard />
                         <span>card</span>
+                      </Link>
                     </li>
                     <li>
                         <MdElectricCar />

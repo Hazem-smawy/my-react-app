@@ -48,32 +48,55 @@ div {
 }
 `
 export const Sliders = styled.div`
- height:100%;
+position:relative;
+ height:255px;
  width:100%;
  border-radius: 0.7rem;
  background-color:${(prop)=>prop.theme.colors.boxSecond};
- position:relative;
  display: grid;
  grid-template-rows: 1fr 20px;
- 
+
  
 
+`
+export const SlidersBtn = styled.div`
+    position:absolute;
+    width:100%;
+    top:50%;
+    transform:translateY(-50%);
+    
+    display:flex;
+    justify-content:space-between;
+    color:#000;
+    z-index:5;
+    
+    .right,.left  {
+        font-size:1.3rem;
+        margin:0 .5rem;
+        padding:.3rem;
+        background:#ffffff54;
+        border-radius:50%;
+    }
+   
 `
 
 export const Slide = styled.div`
- display:flex;
- width:100%;
- text-align:center;
- justify-content: center;
- position:relative;
+    position:relative;
+    left:0;
+    top:0;
+    width:100%;
+   overflow:hidden;
 `
 export const SlideImage = styled.div`
+width:100%;
+height:100%;
+border-radius: 0.7rem;
+overflow:hidden;
 img {
+    
     max-hieght:100%;
     width:100%;
     background-color:${(prop)=>prop.theme.colors.boxFirst};
-    border-radius: 0.7rem;
-    overflow:hidden;
 }
 
 `
@@ -91,16 +114,20 @@ export const Bollets = styled.div`
     }
     li.active {
         width: 21px;
-        background:black;
+        background:${(prop)=>prop.theme.colors.first};
     }
 `
 export const TextBox = styled.div`
+width: 90%;
 position: absolute;
+transform: translateX(-50%);
+left: 50%;
+
 font-family:'m';
 background: #eee;
-bottom:.5rem;
+bottom:0;
 padding: 0.5rem;
-width: 90%;
+
 border-radius: 0.3rem;
 display: grid;
 grid-template-columns:3.5fr 1fr;
@@ -109,7 +136,7 @@ align-items: center;
 gap:.4rem;
 
 button {
-    font-family:'m';
+
     ouline:none;
     border:none;
     background-color:${(prop)=>prop.theme.colors.btnSecond};
@@ -122,14 +149,14 @@ button {
 }
 div {
     text-align:left;
+    h3 {
+        font-size:1rem;
+        color:${(prop)=>prop.theme.colors.supTitle};
+    }
+     p {
+        font-size:.8rem;
+        color:${(prop)=>prop.theme.colors.p};
+    }
+}
 
-}
-div h3 {
-    font-size:1rem;
-    color:${(prop)=>prop.theme.colors.supTitle};
-}
-div p {
-    font-size:.8rem;
-    color:${(prop)=>prop.theme.colors.p};
-}
 `

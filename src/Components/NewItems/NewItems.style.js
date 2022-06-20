@@ -79,7 +79,7 @@ export const ItemBox = styled.div`
     color:${(prop)=>prop.theme.colors.supTitle};
     }
     div p {
-      font-size:.8rem;
+      font-size:.9rem;
       color:${(prop)=>prop.theme.colors.p};
     }
  `

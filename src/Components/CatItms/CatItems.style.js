@@ -16,8 +16,8 @@ export const CatItem = styled.div`
         align-items:center;
         font-size:1.5rem;
         border-radius:.5rem;
-
+        color:${(prop)=>prop.theme.colors.p};
         .active {
-            color:${(prop)=>prop.theme.colors.first};
+            color:${(prop)=>prop.theme.colors.black};
         }
 `

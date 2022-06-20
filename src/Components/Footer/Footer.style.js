@@ -51,11 +51,12 @@ export const Media = styled.div`
     }
 
     .social {
+        font-size:
         margin-top:.6rem;
         color:${(prop)=>prop.theme.colors.p};
         & > * {
             margin-right:.5rem;
-
+            font-size:1.2rem;
             &:hover {
                 color:${(prop)=>prop.theme.colors.black};
             }

@@ -6,6 +6,7 @@ import {GiShoppingBag} from 'react-icons/gi'
 import {AiOutlineLike,AiOutlineStar} from 'react-icons/ai'
 import {RiHeartFill} from 'react-icons/ri'
 import { cars } from "../data"
+import {Link} from 'react-router-dom'
 const Product = () => {
 
     const {name,description,image,price,rate,like} = cars[3];
@@ -15,12 +16,16 @@ const Product = () => {
         <ImageBox>
             <img src={image} alt={name} />
             <Icons>
-                <span>
-                    <FaAngleLeft />
-                </span>
-                <span>
-                    <GiShoppingBag />
-                </span>
+                <Link to='/'>
+                    <span>
+                        <FaAngleLeft />
+                    </span>
+                </Link>
+                <Link to='/card'>
+                    <span>
+                        <GiShoppingBag />
+                    </span>
+                </Link>
             </Icons>
         </ImageBox>
         <NameLove>

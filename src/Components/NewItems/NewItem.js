@@ -2,6 +2,7 @@ import { ItemBox,ItemImage,ItemText,Love,AddIcon } from "./NewItems.style"
 import {MdAdd} from 'react-icons/md'
 import {AiOutlineLike,AiOutlineStar} from 'react-icons/ai'
 import {RiHeartFill} from 'react-icons/ri'
+import { Link } from "react-router-dom"
 const NewItem = ({item}) => {
   const {name,image,price ,description,rate,like} = item;
   return (
@@ -10,7 +11,9 @@ const NewItem = ({item}) => {
           <RiHeartFill />
         </Love>
         <ItemImage>
-            <img src={image} alt={name} />
+            <Link to='/product'>
+              <img src={image} alt={name} />
+            </Link>  
         </ItemImage>
         <ItemText>
            <div>
@@ -30,9 +33,12 @@ const NewItem = ({item}) => {
                 <span>{like}</span>
               </div>
            </div>
+           <Link to='/card'>
            <AddIcon>
              <MdAdd />
            </AddIcon>
+           </Link>
+           
         </ItemText>
     </ItemBox>
   )

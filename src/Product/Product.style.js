@@ -91,7 +91,7 @@ export const Related = styled.div`
 `
 export const Description = styled.div`
 color:${(prop)=>prop.theme.colors.p};
-font-size:.9rem;
+font-size:1rem;
 padding:1rem 0;
 font-family:'m';
 `
