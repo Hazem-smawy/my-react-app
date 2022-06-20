@@ -30,7 +30,7 @@ img {
 
 `
 export const ItemText = styled.div`
-font-family:'m';
+font-family:'c';
 
 display:flex;
 justify-content:flex-start;
@@ -42,7 +42,7 @@ h3 {
 }
 h4 {
     font-size:1rem;
-    
+    color:${(prop)=>prop.theme.colors.p};
 }
 
 div {
