@@ -10,7 +10,7 @@ const SlideShow = () => {
   console.log(data);
  
   const nextSlide = ()=>{
-    pos < data.length ? setPos(pos + 1): setPos(0);
+    pos < data.length - 1 ? setPos(pos + 1): setPos(0);
   }
   const prevSlide = ()=>{
     pos > 0 ? setPos(pos - 1): setPos(data.length - 1);
