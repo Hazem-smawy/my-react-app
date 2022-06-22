@@ -3,18 +3,17 @@ import styled from "styled-components";
 export const ProductBox = styled.div`
     font-family:'c';
     overflow: hidden;
-    margin-top: 1rem;
 `
 export const ImageBox = styled.div`
-display:grid;
-grid-template-columns: 1fr;
-gap:.5rem;
- margin-top:1rem;
- img {
-     width:100%;
-     border-radius:.5rem;
-     border-bottom-right-radius: 3rem;
- }
+    display:grid;
+    grid-template-columns: 1fr;
+    gap:.5rem;
+    margin-top:.5rem;
+    img {
+        width:100%;
+        border-radius:.5rem;
+        border-bottom-right-radius: 3rem;
+    }
 
 `
 export const Icons = styled.div`

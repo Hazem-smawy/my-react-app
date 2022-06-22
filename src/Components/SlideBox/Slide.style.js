@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import {DefaultBtn} from '../../styles/Theme'
 export const SlidersBox = styled.div`
 margin: 1rem 0 1rem;
 border-radius: .5rem;
@@ -22,7 +23,7 @@ div {
 
     li {
         padding:.7rem;
-        font-size:17px;
+        font-size:1.1rem;
         list-style:none;
         font-family:'g';
         transform:rotate(270deg);
@@ -42,7 +43,7 @@ div {
             border-radius: 0.5rem;
         }
         &.active::before {
-            background:black;
+            background:${(prop)=>prop.theme.colors.first};
         }
     }
 }
@@ -67,7 +68,6 @@ export const SlidersBtn = styled.div`
     
     display:flex;
     justify-content:space-between;
-    color:#000;
     z-index:5;
     
     .right,.left  {
@@ -76,6 +76,10 @@ export const SlidersBtn = styled.div`
         padding:.3rem;
         background:#ffffff54;
         border-radius:50%;
+        color:${(prop)=>prop.theme.colors.black};
+        .right:hover,.left:hover {
+            color:${(prop)=>prop.theme.colors.first};
+        }
     }
    
 `
@@ -136,16 +140,11 @@ align-items: center;
 gap:.4rem;
 
 button {
-
-    ouline:none;
-    border:none;
-    background-color:${(prop)=>prop.theme.colors.btnSecond};
+    ${DefaultBtn}
     width:fit-content;
     padding:.5rem;
-    color:${(prop)=>prop.theme.colors.white};
     border-radius:.4rem;
     white-space:nowrap;
-    text-overflow:ellipsis;
 }
 div {
     text-align:left;

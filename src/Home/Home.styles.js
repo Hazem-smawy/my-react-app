@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { DefaultP,DefaultTitle ,DefaultSupTitle} from '../styles/Theme'
 export const Container = styled.div`
     margin:0 auto;   
     width:90vw;
@@ -13,23 +14,19 @@ export const Container = styled.div`
 export const TextTitle = styled.div`
    
     margin-bottom:1rem;
-    font-family:c;
         h2 {
-            color:${(prop)=>prop.theme.colors.black};
+            ${DefaultTitle}
         }
         p {
-            color:${(prop)=>prop.theme.colors.p};
+            ${DefaultP}
             margin-top:-.3rem;
-            font-size:.8rem;
             margin-left:.5rem;
         }
 
 `
 export const NewData = styled.div`
 h3 {
-    font-size:1.3rem;
+    ${DefaultSupTitle}
     margin-bottom:1rem;
-    font-family:'c';
-    color:${(prop)=>prop.theme.colors.black};
 }
 `

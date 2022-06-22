@@ -1,9 +1,8 @@
 import styled from 'styled-components'
+import { Flex,DefaultBtn } from '../../styles/Theme'
 
 export const HeaderContent = styled.header`
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
+    ${Flex}
     padding:1rem;
     margin:0rem .3rem 1rem;
     color:${(prop)=>prop.theme.colors.black};
@@ -88,14 +87,13 @@ export const SideBar = styled.div`
             }
         }
         li {
+            ${Flex}
             font-size:.9rem;
             font-weight:normal;
             margin:1rem .3rem;
             font-family:'m';
             list-style:none;
-            display:flex;
-            justify-content:flex-start;
-            align-items:center;
+          
             color:${(prop)=>prop.theme.colors.p};
             
             span {
@@ -110,7 +108,7 @@ export const SideBar = styled.div`
             }
     
             &:hover {
-                color:red;
+                color:${(prop)=>prop.theme.colors.first};
             }
         }
     
@@ -139,16 +137,14 @@ export const SideBar = styled.div`
                     }
                 }
                 button {
+                    ${DefaultBtn}
+                    ${Flex}
                     font-family:'c';
                     padding:.5rem .7rem;
                     color:#fff;
-                    border:none;
-                    outline:none;
-                    display:flex;
-                    justify-content:center;
-                    align-items:center;
+                   
                     border-radius:.5rem;
-                    background:${(prop)=>prop.theme.colors.first};
+                    
                     position:absolute;
                     bottom:-1.25rem;
                     left:50%;

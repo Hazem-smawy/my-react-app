@@ -73,6 +73,7 @@ export const ItemBox = styled.div`
       font-size:1.2rem;
       font-weight:normal;
       margin-bottom:5px;
+      color:${(prop)=>prop.theme.colors.black};
     }
     div h3 {
     font-size:1rem;

@@ -1,22 +1,17 @@
 import styled from 'styled-components'
-
+import { DefaultP, DefaultTitle, Flex } from '../../styles/Theme'
 export const FooterContainer = styled.div`
 
 width:100%;
-font-family:'c';
-
 display: grid;
-    grid-template-columns: 1fr;
-    gap: .5rem;
+grid-template-columns: 1fr;
+gap: .5rem;
 
 p {
-    color:${(prop)=>prop.theme.colors.p};
-    font-size:1rem;
+    ${DefaultP}
 }
 h4 {
-    color:${(prop)=>prop.theme.colors.black};
-    font-size:1.3rem;
-    font-family:'m';
+   ${DefaultTitle}
 }
 `
 export const LinkBox = styled.div`
@@ -25,9 +20,9 @@ margin-top:1rem;
 width:100%;
 background:${(prop)=>prop.theme.colors.boxSecond};
 padding:1rem ;
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem;
+display: grid;
+grid-template-columns: 1fr;
+gap: 1rem;
 `
 export const Info = styled.div`
     display:flex;
@@ -67,12 +62,10 @@ export const Links = styled.div`
 
 `
 export const CopyRight = styled.div`
-
+    ${Flex}
     color:${(prop)=>prop.theme.colors.p};
-    background:#fff;
-    display:flex;
-    justify-content:center;
-    align-items:center;
+    background:${(prop)=>prop.theme.colors.bg};
+  
     padding:.5rem;
     p {
         margin-right:.5rem;

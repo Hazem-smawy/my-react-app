@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import {DefaultP,DefaultTitle,DefaultInput} from '../styles/Theme'
 export const FormContainer = styled.div`
 display: grid;
 grid-template-columns: 1fr;
@@ -16,13 +17,11 @@ export const LoginText = styled.div`
         border-radius:50%;
     }
     h3 {
-        color:${(prop)=>prop.theme.colors.black};
-        font-size:1.3rem;
+        ${DefaultTitle}
     }
     p {
         margin-top:.5rem;
-        color:${(prop)=>prop.theme.colors.p};
-        font-size:.9rem;
+       ${DefaultP}
     }
 
 `
@@ -34,20 +33,18 @@ export const Form = styled.div`
         grid-template-columns: 1fr;
         gap:1rem;
         justify-content:center;
-        width:250px;
+        width:300px;
         font-family:'c';
         div {
             
             width:100%;
             background:${(prop)=>prop.theme.colors.boxSecond};
             border-radius:.4rem;
-            padding:.5rem;
+            padding:.7rem;
             display:flex;
 
             input {
-                outline:none;
-                border:none;
-                background:transparent;
+               ${DefaultInput}
                 margin-left:.5rem;
                 width:100%;
             }
@@ -75,7 +72,6 @@ export const Forget = styled.div`
     justify-content:space-between;
 
     p {
-        color:${(prop)=>prop.theme.colors.p};
-        font-size:.9rem;
+        ${DefaultP}
     }
 `
