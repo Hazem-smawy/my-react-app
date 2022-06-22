@@ -6,47 +6,31 @@ export const ProductBox = styled.div`
     margin-top: 1rem;
 `
 export const ImageBox = styled.div`
- position:relative;
+display:grid;
+grid-template-columns: 1fr;
+gap:.5rem;
  margin-top:1rem;
  img {
      width:100%;
      border-radius:.5rem;
      border-bottom-right-radius: 3rem;
  }
- &::before {
-    content: '';
-    position: absolute;
-    width: 58px;
-    height: 49px;
-    border-radius: 50%;
-    right: 0.1rem;
-    bottom: 0.4rem;
-    box-shadow: 1rem 1rem #fff;
- }
+
 `
 export const Icons = styled.div`
-position: absolute;
-top: 0;
-left: 0;
+
 display: flex;
 justify-content: space-between;
 width: 100%;
 font-size: 1.5rem;
- color:${(prop)=>prop.theme.colors.black};
- span {
-    padding:.5rem;
-    & > * {
-        outline: #ffffff7d 2px solid;
-        border-radius: 50%;
-        background:#ffffff7d;
-    }
+padding:.5rem;
+color:${(prop)=>prop.theme.colors.black};
 
- }
- span:last-child {
-     ouline:none;
-    border-bottom-left-radius: 1rem;
-    background:${(prop)=>prop.theme.colors.boxSecond};
- }
+ 
+     
+    
+ 
+
 `
 export const NameLove = styled.div`
     display: flex;

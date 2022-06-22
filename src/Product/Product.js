@@ -14,7 +14,7 @@ const Product = () => {
     <Container>
         <ProductBox>
         <ImageBox>
-            <img src={image} alt={name} />
+           
             <Icons>
                 <Link to='/'>
                     <span>
@@ -26,7 +26,9 @@ const Product = () => {
                         <GiShoppingBag />
                     </span>
                 </Link>
+               
             </Icons>
+            <img src={image} alt={name} />
         </ImageBox>
         <NameLove>
             <h4>{name}</h4>

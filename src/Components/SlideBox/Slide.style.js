@@ -62,7 +62,7 @@ position:relative;
 export const SlidersBtn = styled.div`
     position:absolute;
     width:100%;
-    top:50%;
+    top:40%;
     transform:translateY(-50%);
     
     display:flex;
@@ -93,7 +93,7 @@ height:100%;
 border-radius: 0.7rem;
 overflow:hidden;
 img {
-    
+    border-radius: 0.7rem;
     max-hieght:100%;
     width:100%;
     background-color:${(prop)=>prop.theme.colors.boxFirst};
@@ -125,7 +125,7 @@ left: 50%;
 
 font-family:'m';
 background: #eee;
-bottom:0;
+bottom:.3rem;
 padding: 0.5rem;
 
 border-radius: 0.3rem;
