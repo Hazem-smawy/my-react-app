@@ -90,6 +90,7 @@ export const SideBar = styled.div`
         }
         li {
             ${Flex}
+            justify-content:flex-start;
             font-size:.9rem;
             font-weight:normal;
             margin:1rem .3rem;
