@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-
+import {DefaultBox} from '../../styles/Theme'
 
 export const  ItemsContainer = styled.div`
 column-count: 1;
@@ -12,7 +12,7 @@ export const ItemBox = styled.div`
  position:relative;
  overflow:hidden;
  border-radius:.5rem;
- background:${(prop)=>prop.theme.colors.boxSecond};
+ ${DefaultBox}
  margin-bottom:1rem;
 
  `

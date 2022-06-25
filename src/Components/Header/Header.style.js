@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Flex,DefaultBtn } from '../../styles/Theme'
+import { Flex,DefaultBtn,DefaultBox } from '../../styles/Theme'
 
 export const HeaderContent = styled.header`
     ${Flex}
@@ -14,7 +14,7 @@ padding: 0.5rem;
 border-radius: 0.3rem;
 width: 40px;
 height: 40px;
-background-color:${(prop)=>prop.theme.colors.boxSecond};
+${DefaultBox}
 
 `
 export const App = styled.nav`
@@ -23,7 +23,7 @@ export const App = styled.nav`
     background-color: #eee;
     width: 40px;
     height: 40px;
-    background-color:${(prop)=>prop.theme.colors.boxSecond};
+    ${DefaultBox}
 
     .open {
         display:none;
@@ -46,7 +46,7 @@ export const SideBar = styled.div`
     top:0;
     border-radius:1rem;
     z-index:2;
-    background-color:${(prop)=>prop.theme.colors.boxSecond};
+    ${DefaultBox}
     
     ul {
         padding:1.5rem;
@@ -141,7 +141,7 @@ export const SideBar = styled.div`
                     ${Flex}
                     font-family:'c';
                     padding:.5rem .7rem;
-                    color:#fff;
+                    color:${(prop)=>prop.theme.colors.black};
                    
                     border-radius:.5rem;
                     

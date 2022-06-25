@@ -21,7 +21,7 @@ color:${(prop)=>prop.theme.colors.supTitle};
 font-size:1.1rem;
 font-family:'c';
 `
-export const Btn = css`
+export const DefaultBtn = css`
 border:none;
 outline:none;
 background:${(prop)=>prop.theme.colors.first};
@@ -31,7 +31,9 @@ display:flex;
 justify-content:center;
 align-items:center;
 `
-
+export const DefaultBox = css`
+background:${(prop)=>prop.theme.colors.boxSecond};
+`
 const theme={
     colors:{
         first:'#dc0c38',

@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { DefaultP, DefaultTitle, Flex } from '../../styles/Theme'
+import { DefaultP, DefaultTitle, Flex,DefaultBox } from '../../styles/Theme'
 export const FooterContainer = styled.div`
 
 width:100%;
@@ -18,7 +18,7 @@ export const LinkBox = styled.div`
 border-radius:1rem;
 margin-top:1rem;
 width:100%;
-background:${(prop)=>prop.theme.colors.boxSecond};
+${DefaultBox}
 padding:1rem ;
 display: grid;
 grid-template-columns: 1fr;

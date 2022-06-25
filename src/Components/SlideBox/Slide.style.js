@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import {DefaultBtn} from '../../styles/Theme'
+import {DefaultBtn,DefaultBox} from '../../styles/Theme'
 export const SlidersBox = styled.div`
 margin: 1rem 0 1rem;
 border-radius: .5rem;
@@ -12,7 +12,7 @@ height:250px;
 export const FirstCol = styled.div`
 display:flex;
 flex-direction:columns;
-background-color:${(prop)=>prop.theme.colors.boxSecond};
+${DefaultBox}
 overflow:hidden;
 border-radius:.5rem;
 justify-content:center;
@@ -53,7 +53,7 @@ position:relative;
  height:255px;
  width:100%;
  border-radius: 0.7rem;
- background-color:${(prop)=>prop.theme.colors.boxSecond};
+ ${DefaultBox}
  display: grid;
  grid-template-rows: 1fr 20px;
 
@@ -100,7 +100,7 @@ img {
     border-radius: 0.7rem;
     max-hieght:100%;
     width:100%;
-    background-color:${(prop)=>prop.theme.colors.boxFirst};
+    ${DefaultBox}
 }
 
 `

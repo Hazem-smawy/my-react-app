@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Flex } from '../../styles/Theme'
+import { Flex ,DefaultBox} from '../../styles/Theme'
 export const Categories = styled.div`
     hieght:60px;
     display:flex;
@@ -11,7 +11,7 @@ export const CatItem = styled.div`
         margin-right:.5rem;
         height:50px;
         width:50px;
-        background-color:${(prop)=>prop.theme.colors.boxSecond};
+        ${DefaultBox}
         
         font-size:1.5rem;
         border-radius:.5rem;
