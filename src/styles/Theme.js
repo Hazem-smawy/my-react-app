@@ -8,7 +8,7 @@ background:transparent;
 `
 export const DefaultP = css`
 color:${(prop)=>prop.theme.colors.p};
-font-size:1rem;
+font-size:.9rem;
 font-family:'m';
 `
 export const DefaultTitle = css`
@@ -25,6 +25,7 @@ export const DefaultBtn = css`
 border:none;
 outline:none;
 background:${(prop)=>prop.theme.colors.first};
+color:${(prop)=>prop.theme.colors.white};
 `
 export const Flex = css`
 display:flex;

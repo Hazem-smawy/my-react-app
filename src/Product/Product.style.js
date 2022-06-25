@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import {DefaultP, DefaultBtn } from "../styles/Theme";
 export const ProductBox = styled.div`
     font-family:'c';
     overflow: hidden;
@@ -73,10 +73,9 @@ export const Related = styled.div`
  }
 `
 export const Description = styled.div`
-color:${(prop)=>prop.theme.colors.p};
-font-size:1rem;
+${DefaultP}
 padding:1rem 0;
-font-family:'m';
+
 `
 export const AddToCard = styled.div`
 width:100%;
@@ -97,17 +96,16 @@ h4 {
     flex:1;
 }
 button {
+    ${DefaultBtn}
     margin-right:1rem;
     flex:2;
-    outline:none;
-    border:none;
+    
     border-radius:.3rem;
     padding: .2rem .4rem;
     display:flex;
     justify-content:center;
     align-items:center;
-    color:#fff;
-    background:${(prop)=>prop.theme.colors.first};
+   
     span {
         padding-left:.5rem;
     }

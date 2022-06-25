@@ -2,7 +2,9 @@ import styled from 'styled-components'
 import { Flex,DefaultBtn,DefaultBox } from '../../styles/Theme'
 
 export const HeaderContent = styled.header`
-    ${Flex}
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
     padding:1rem;
     margin:0rem .3rem 1rem;
     color:${(prop)=>prop.theme.colors.black};
