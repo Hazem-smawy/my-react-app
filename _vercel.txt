@@ -1,0 +1,1 @@
+vc-domain-verify=hazsma.vercel.app.com,c2c6eb7db2ff15d15c30
