@@ -102,7 +102,6 @@ export const SideBar = styled.div`
             font-size:.9rem;
             font-weight:normal;
             margin:1rem .3rem;
-            padding-left:1rem;
             font-family:'m';
             list-style:none;
             position:relative;
