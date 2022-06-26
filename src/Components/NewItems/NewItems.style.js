@@ -37,7 +37,7 @@ export const ItemBox = styled.div`
     align-items:center;
     padding:.5rem;
     font-size:1.6rem;
-    color:#f90202;
+    color:${(prop)=>prop.theme.colors.love};
  `
  export const ItemText = styled.div`
    font-family: 'm';
@@ -62,10 +62,10 @@ export const ItemBox = styled.div`
          }
       }
       .star {
-         color:blue;
+         color:${(prop)=>prop.theme.colors.star};
       }
       .like {
-         color:green;
+         color:${(prop)=>prop.theme.colors.like};
       }
 
     }

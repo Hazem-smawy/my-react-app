@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {DefaultP, DefaultBtn } from "../styles/Theme";
+import {DefaultP, DefaultBtn, DefaultTitle, DefaultBox } from "../styles/Theme";
 export const ProductBox = styled.div`
     font-family:'c';
     overflow: hidden;
@@ -25,26 +25,22 @@ font-size: 1.5rem;
 padding:.5rem;
 color:${(prop)=>prop.theme.colors.black};
 
- 
-     
-    
- 
-
+`
+export const Details = styled.div`
+padding:0 1rem;
+${DefaultBox}
 `
 export const NameLove = styled.div`
     display: flex;
     justify-content: space-between;
     padding: 1rem 0 1rem;
     font-size: 1.2rem;
-    color: #222;
     h4 {
-        font-family:'c';
-        font-size:1.3rem;
-        font-weight:normal;
+       ${DefaultTitle}
     }
     p {
         font-size:1.5rem;
-        color:${(prop)=>prop.theme.colors.first};
+        color:${(prop)=>prop.theme.colors.love};
     }
 `
 export const Properaties = styled.div`
@@ -52,6 +48,12 @@ display: flex;
 justify-content: center;
 flex-direction: column;
 align-items: flex-start;
+.star {
+    color:${(prop)=>prop.theme.colors.star};
+ }
+ .like {
+    color:${(prop)=>prop.theme.colors.like};
+ }
  p {
     display:flex;
     align-items:center;
@@ -64,7 +66,8 @@ align-items: flex-start;
 export const Related = styled.div`
  display:flex;
  justify-content:flex-start;
- padding:1rem 0;
+ padding:1rem .5rem;
+ background-color:${(prop)=>prop.theme.colors.SubBox};
  img {
      margin-right:1rem;
      width:100%;
@@ -87,13 +90,12 @@ display:flex;
 justify-content:space-between;
 
 padding: 1.5rem;
-font-family:'c';
 h4 {
     padding-right:.5rem;
     font-size:1.3rem;
-    font-weight:normal;
     margin-left:1rem;
     flex:1;
+    ${DefaultTitle}
 }
 button {
     ${DefaultBtn}

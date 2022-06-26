@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import {DefaultBtn,DefaultBox} from '../../styles/Theme'
+import {DefaultBtn,DefaultBox, DefaultSupTitle, DefaultP} from '../../styles/Theme'
 export const SlidersBox = styled.div`
 margin: 1rem 0 1rem;
 border-radius: .5rem;
@@ -122,6 +122,7 @@ export const Bollets = styled.div`
     }
 `
 export const TextBox = styled.div`
+${DefaultBox}
 width: 90%;
 position: absolute;
 transform: translateX(-50%);
@@ -149,12 +150,13 @@ button {
 div {
     text-align:left;
     h3 {
+        ${DefaultSupTitle}
         font-size:1rem;
-        color:${(prop)=>prop.theme.colors.supTitle};
+        
     }
      p {
+        ${DefaultP}
         font-size:.8rem;
-        color:${(prop)=>prop.theme.colors.p};
     }
 }
 

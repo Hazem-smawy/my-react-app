@@ -1,5 +1,11 @@
 import {css} from 'styled-components'
+import { createGlobalStyle } from 'styled-components'
 
+export const GlobalStyle = createGlobalStyle`
+body {
+    background:${(prop)=>prop.theme.colors.bg};
+}
+`
 export const DefaultInput= css`
 border:none;
 outline:none;
@@ -44,6 +50,11 @@ const light={
         p:'#777',
         bg:'#fff',
         boxSecond:'#eee',
+        star:'#ffbf18',
+        like:'#4f48ec',
+        love:'#c81d4c',
+        SubBox:'#f2f2f2'
+
     }
 }
 const dark={
@@ -51,10 +62,14 @@ const dark={
         first:'#b9f245',
         white:"#111",
         black:"#fff",
-        supTitle:'#333',
+        supTitle:'#eae5e5',
         p:'#777',
         bg:'#0d1715',
         boxSecond:'#1f2928',
+        star:'#ffbf18',
+        like:'#4f48ec',
+        love:'#c81d4c',
+        SubBox:'#0f3754'
     }
 }
 
