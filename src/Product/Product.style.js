@@ -5,7 +5,8 @@ export const ProductBox = styled.div`
     overflow: hidden;
 `
 export const ImageBox = styled.div`
-    border-radius:.5rem;
+border-top-right-radius: .5rem;
+border-top-left-radius: .5rem;
     margin-top:.5rem;
     background:${(prop)=>prop.theme.colors.boxSecond};
     img {
@@ -24,7 +25,7 @@ font-size: 1.5rem;
 padding:.5rem;
 color:${(prop)=>prop.theme.colors.black};
 background:${(prop)=>prop.theme.colors.bg};
-margin-bottom:.5rem;
+margin:.5rem 0;
 
 span {
     color:${(prop)=>prop.theme.colors.black};
