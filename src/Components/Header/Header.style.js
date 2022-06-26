@@ -144,10 +144,7 @@ export const SideBar = styled.div`
                     ${Flex}
                     font-family:'c';
                     padding:.5rem .7rem;
-                    color:${(prop)=>prop.theme.colors.black};
-                   
-                    border-radius:.5rem;
-                    
+                    border-radius:.5rem;    
                     position:absolute;
                     bottom:-1.25rem;
                     left:50%;

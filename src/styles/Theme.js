@@ -35,7 +35,7 @@ align-items:center;
 export const DefaultBox = css`
 background:${(prop)=>prop.theme.colors.boxSecond};
 `
-const theme={
+const light={
     colors:{
         first:'#dc0c38',
         white:"#fff",
@@ -46,5 +46,20 @@ const theme={
         boxSecond:'#eee',
     }
 }
+const dark={
+    colors:{
+        first:'#b9f245',
+        white:"#111",
+        black:"#fff",
+        supTitle:'#333',
+        p:'#777',
+        bg:'#0d1715',
+        boxSecond:'#1f2928',
+    }
+}
 
+const theme  = {
+    dark,
+    light
+}
 export default  theme;
