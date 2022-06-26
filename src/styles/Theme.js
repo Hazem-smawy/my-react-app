@@ -9,17 +9,17 @@ background:transparent;
 export const DefaultP = css`
 color:${(prop)=>prop.theme.colors.p};
 font-size:.9rem;
-font-family:'m';
+font-family:'c';
 `
 export const DefaultTitle = css`
 color:${(prop)=>prop.theme.colors.black};
 font-size:1.3rem;
-font-family:'c';
+font-family:'m';
 `
 export const DefaultSupTitle = css`
 color:${(prop)=>prop.theme.colors.supTitle};
 font-size:1.1rem;
-font-family:'c';
+font-family:'m';
 `
 export const DefaultBtn = css`
 border:none;
