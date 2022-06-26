@@ -27,6 +27,6 @@ export const TextTitle = styled.div`
 export const NewData = styled.div`
 h3 {
     ${DefaultSupTitle}
-    margin-bottom:1rem;
+    margin:1rem 0;
 }
 `
