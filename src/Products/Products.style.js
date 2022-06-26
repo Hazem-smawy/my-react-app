@@ -11,15 +11,14 @@ export const Title = styled.div`
     padding: 0.5rem 1rem;
 `
 export const Icons = styled.div`
-display:flex;
-justify-content:space-between;
-align-items:center;
+display: flex;
+justify-content: space-between;
+width: 100%;
+font-size: 1.5rem;
 padding:.5rem;
-font-size:1.3rem;
-h4 {
-    font-size:1.2rem;
-    font-family:'m';
-    font-weight:normal;
-}
+color:${(prop)=>prop.theme.colors.black};
+background:${(prop)=>prop.theme.colors.bg};
+margin-bottom:.5rem;
+
 
 `
