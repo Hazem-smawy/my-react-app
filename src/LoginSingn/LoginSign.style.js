@@ -58,6 +58,7 @@ export const Form = styled.div`
             justify-content:center;
             ${DefaultBtn}
             input[type='submit']{
+                color:${(prop)=>prop.theme.colors.white};
                 width:auto;
             }
         }
