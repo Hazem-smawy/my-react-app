@@ -69,7 +69,7 @@ const Sign = () => {
                             placeholder='confirm you password'
                             name='password2'
                     />
-                    <BsEye />
+                   
                     
                 </div>
                 <div>

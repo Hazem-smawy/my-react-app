@@ -9,7 +9,7 @@ import { cars } from "../data"
 import {Link} from 'react-router-dom'
 const Product = () => {
 
-    const {name,description,image,price,rate,like} = cars[3];
+    const {name,description,image,price,rate,like} = cars[8];
   return (
     <Container>
          <Icons>
@@ -26,9 +26,7 @@ const Product = () => {
                
             </Icons>
         <ProductBox>
-        <ImageBox>
-           
-            
+        <ImageBox>         
             <img src={image} alt={name} />
         </ImageBox>
         <Details>

@@ -14,7 +14,7 @@ const SlideItem = ({data}) => {
                 <p>some description</p>
             </div>
             <button>
-                Vist
+                go now
             </button>
         </TextBox>
     </Slide>

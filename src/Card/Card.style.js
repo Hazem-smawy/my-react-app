@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-
+import { Flex ,DefaultBox, DefaultBtn} from '../styles/Theme'
 export const CardContainer = styled.div`
 padding:1rem 0;
 display:grid;
@@ -53,15 +53,14 @@ div {
     
 
     span {
-        color:white;
-        display:flex;
-        justify-content:center;
-        align-items:center;
+       
+        ${Flex}
         width:25px;
         height:25px;
         margin-right:5px;
         border-radius:5px;
         opacity:.7;
+        color:${(prop)=>prop.theme.colors.white};
         background:${(prop)=>prop.theme.colors.first};
 
         &:hover {
@@ -81,21 +80,21 @@ export const ItemOption = styled.div`
         position:absolute;
         right:0;
         top:0;
-        display:flex;
+        ${Flex}
         height:20px;
         width:20px;
-        justify-content:center;
-        align-items:center;
-        font-size:1.3rem;
+        color:${(prop)=>prop.theme.colors.p};
+        font-size:1.2rem;
         font-family:'c';
-        color:#777;
+        
         border-radius:50%;
     }
 `
 export const CardSummary = styled.div`
     padding:1rem;
-    background:${(prop)=>prop.theme.colors.boxSecond};
-    font-family:'c';
+    border-radius:.5rem;
+    ${DefaultBox}
+    color:${(prop)=>prop.theme.colors.black};
     div {
         display:flex;
         justify-content:space-between;
@@ -103,22 +102,19 @@ export const CardSummary = styled.div`
         h5 {
             font-size:1.2rem;
         }
-       
+        &.total {
+            font-size:1.4rem;
+            color:${(prop)=>prop.theme.colors.like};
+            font-weight:bold;
+        }
     }
-    &.total {
-        font-size:1.4rem;
-        color:blue;
-        font-weight:bold;
-    }
+  
   
    
     button {
-        margin-top:1rem;
-        background:${(prop)=>prop.theme.colors.first};
-        color:#fff;
+        ${DefaultBtn}
+        margin-top:1rem; 
         padding:.5rem 1rem;
-        outline:none;
-        border:none;
         border-radius:.3rem;
     }
 `

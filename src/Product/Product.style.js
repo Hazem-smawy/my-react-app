@@ -5,9 +5,7 @@ export const ProductBox = styled.div`
     overflow: hidden;
 `
 export const ImageBox = styled.div`
-    display:grid;
-    grid-template-columns: 1fr;
-    gap:.5rem;
+    border-radius:.5rem;
     margin-top:.5rem;
     background:${(prop)=>prop.theme.colors.boxSecond};
     img {
@@ -27,6 +25,13 @@ padding:.5rem;
 color:${(prop)=>prop.theme.colors.black};
 background:${(prop)=>prop.theme.colors.bg};
 margin-bottom:.5rem;
+
+span {
+    color:${(prop)=>prop.theme.colors.black};
+}
+h4 {
+    ${DefaultTitle}
+}
 
 `
 export const Details = styled.div`

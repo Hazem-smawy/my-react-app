@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import {DefaultP,DefaultTitle,DefaultInput} from '../styles/Theme'
+import {DefaultBtn,DefaultP,DefaultTitle,DefaultInput} from '../styles/Theme'
 export const FormContainer = styled.div`
 display: grid;
 grid-template-columns: 1fr;
@@ -38,15 +38,17 @@ export const Form = styled.div`
         div {
             
             width:100%;
+           
             background:${(prop)=>prop.theme.colors.boxSecond};
             border-radius:.4rem;
             padding:.7rem;
             display:flex;
-
+            color:${(prop)=>prop.theme.colors.p};
             input {
                ${DefaultInput}
                 margin-left:.5rem;
                 width:100%;
+                color:${(prop)=>prop.theme.colors.black};
             }
             
         }
@@ -54,11 +56,8 @@ export const Form = styled.div`
         div:last-child {
             display:flex;
             justify-content:center;
-            background:${(prop)=>prop.theme.colors.first};
-            color:#fff;
+            ${DefaultBtn}
             input[type='submit']{
-                color:#fff;
-
                 width:auto;
             }
         }

@@ -57,8 +57,8 @@ export const SideBar = styled.div`
         position:relative;
         .theme {
             position:absolute;
-            left:1.5rem;
-            top:1rem;
+            right:1.5rem;
+            bottom:3rem;
             font-size:1.3rem;
             color:${(prop)=>prop.theme.colors.p};
 
@@ -114,7 +114,7 @@ export const SideBar = styled.div`
             &.logOut {
                 position:absolute;
 
-                bottom:2.5rem;
+                bottom:3rem;
                 color:red;
             }
     
