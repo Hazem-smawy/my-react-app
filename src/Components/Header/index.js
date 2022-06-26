@@ -9,10 +9,11 @@ import {GiSettingsKnobs} from 'react-icons/gi'
 import {AiOutlineCreditCard} from 'react-icons/ai'
 import {MdElectricCar,MdLogin,MdLogout} from 'react-icons/md'
 import {IoMdClose} from 'react-icons/io'
-import {FaFirefox} from 'react-icons/fa'
+import {FaFirefox,FaSun} from 'react-icons/fa'
 import {CgMenuRight} from 'react-icons/cg'
+import {BiMoon} from 'react-icons/bi'
 import { Link } from 'react-router-dom'
-const Header = ({isClose,setIsClose}) => {
+const Header = ({taggleTheme,setTaggleTheme,isClose,setIsClose}) => {
   return (
     <HeaderContent>
         <Logo>
@@ -25,6 +26,7 @@ const Header = ({isClose,setIsClose}) => {
            
             <SideBar className={ isClose ?'active':''} >
                 <ul>
+                    {taggleTheme ? <FaSun className='theme' onClick={()=>setTaggleTheme(false)}  />:<BiMoon className='theme' onClick={()=>setTaggleTheme(true)} />}
                     <div className='user'>
                         <img src={Img} alt="car"/>
                         <div>
@@ -81,6 +83,7 @@ const Header = ({isClose,setIsClose}) => {
                         <MdLogout />
                         <span>log out</span>
                     </li>
+
                 </ul>
             </SideBar>
         </App>

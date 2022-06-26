@@ -22,13 +22,14 @@ div {
     align-items: center;
 
     li {
+        ${DefaultSupTitle}
         padding:.7rem;
-        font-size:1.1rem;
+        
         list-style:none;
         font-family:'g';
         transform:rotate(270deg);
         text-align:center;
-        font-weight:normal;
+        
         position:relative;
 
         &::before {
@@ -127,10 +128,7 @@ width: 90%;
 position: absolute;
 transform: translateX(-50%);
 left: 50%;
-
-font-family:'m';
-background: #eee;
-bottom:.3rem;
+bottom:0;
 padding: 0.5rem;
 
 border-radius: 0.3rem;

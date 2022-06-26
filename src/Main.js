@@ -9,12 +9,12 @@ import Card from './Card/Card'
 
 
 
-const Main = () => {
+const Main = ({taggleTheme,setTaggleTheme}) => {
   return (
     <BrowserRouter>
      <Routes>
              
-             <Route path='/' element={<Home />} />
+             <Route path='/' element={<Home taggleTheme={taggleTheme} setTaggleTheme={setTaggleTheme} />} />
              <Route path='products' element={<Products />} />
              <Route path='product' element={<Product />} />
              <Route path='login' element={<Login />} />

@@ -7,12 +7,12 @@ import  SlideShow  from '../Components/SlideBox/SlideShow'
 import Footer from '../Components/Footer/Footer'
 import {useState} from 'react'
 import {cars} from '../data'
-const Home = () => {
+const Home = ({taggleTheme,setTaggleTheme}) => {
   const [closeSideBar,setCloseSideBar]= useState(false);
  
   return (
     <>
-       <Header isClose={closeSideBar} setIsClose={setCloseSideBar} />
+       <Header taggleTheme={taggleTheme} setTaggleTheme={setTaggleTheme} isClose={closeSideBar} setIsClose={setCloseSideBar} />
         <Container onClick={()=> closeSideBar  && setCloseSideBar(false)}
           className={closeSideBar ? "active":" "}>
           

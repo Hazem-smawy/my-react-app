@@ -1,13 +1,13 @@
 import {Bollets,SlidersBox,FirstCol,Sliders,SlidersBtn} from './Slide.style'
-import {cars} from '../../data'
+import {SlideData} from '../../data'
 import SlideItem from './SlideItem'
 import { Link } from 'react-router-dom'
 import {useState} from 'react'
 import {FaAngleLeft,FaAngleRight} from 'react-icons/fa'
 const SlideShow = () => {
-  const data=cars;
+  const data= SlideData;
   const [pos,setPos]= useState(0);
-  console.log(data);
+  
  
   const nextSlide = ()=>{
     pos < data.length - 1 ? setPos(pos + 1): setPos(0);

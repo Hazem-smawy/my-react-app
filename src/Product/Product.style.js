@@ -9,6 +9,7 @@ export const ImageBox = styled.div`
     grid-template-columns: 1fr;
     gap:.5rem;
     margin-top:.5rem;
+    background:${(prop)=>prop.theme.colors.boxSecond};
     img {
         width:100%;
         border-radius:.5rem;
@@ -27,8 +28,11 @@ color:${(prop)=>prop.theme.colors.black};
 
 `
 export const Details = styled.div`
-padding:0 1rem;
+padding:0 1rem 2rem;
 ${DefaultBox}
+border-bottom-right-radius: .5rem;
+border-bottom-left-radius: .5rem;
+
 `
 export const NameLove = styled.div`
     display: flex;
@@ -64,12 +68,15 @@ align-items: flex-start;
  }
 `
 export const Related = styled.div`
+ overflow:hidden;
  display:flex;
  justify-content:flex-start;
  padding:1rem .5rem;
- background-color:${(prop)=>prop.theme.colors.SubBox};
+ border-radius:.5rem;
+ margin:1rem 0;
+ background-color:${(prop)=>prop.theme.colors.bg};
  img {
-     margin-right:1rem;
+     margin-right:.5rem;
      width:100%;
      height:50px;
      border-radius:.3rem;

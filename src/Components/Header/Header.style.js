@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Flex,DefaultBtn,DefaultBox } from '../../styles/Theme'
+import {DefaultP, Flex,DefaultBtn,DefaultBox } from '../../styles/Theme'
 
 export const HeaderContent = styled.header`
     display:flex;
@@ -55,6 +55,12 @@ export const SideBar = styled.div`
         width:100%;
         height:100%;
         position:relative;
+        .theme {
+            position:absolute;
+            left:0;
+            top:0;
+            ${DefaultP}
+        }
         h4,h5 {
             font-weight:normal;
         }
