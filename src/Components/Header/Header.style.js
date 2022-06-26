@@ -58,7 +58,7 @@ export const SideBar = styled.div`
         .theme {
             position:absolute;
             right:1.5rem;
-            bottom:3.5rem;
+            bottom:3.8rem;
             font-size:1.3rem;
             color:${(prop)=>prop.theme.colors.p};
 

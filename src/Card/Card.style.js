@@ -85,8 +85,7 @@ export const ItemOption = styled.div`
         width:20px;
         color:${(prop)=>prop.theme.colors.p};
         font-size:1.2rem;
-        font-family:'c';
-        
+        font-family:'c'; 
         border-radius:50%;
     }
 `

@@ -1,5 +1,7 @@
 import {CardItemContainer,ItemImg,ItemText,ItemOption} from './Card.style'
 import {useState} from 'react'
+import {MdDeleteOutline} from 'react-icons/md'
+
 const CardItem = ({data}) => {
     const [counter,setCounter] = useState(1);
     const {name,image,price} = data;
@@ -19,7 +21,7 @@ const CardItem = ({data}) => {
             </div>
         </ItemText>
         <ItemOption>
-           <span>x</span>
+           <span><MdDeleteOutline /></span>
         </ItemOption>
     </CardItemContainer>
   )
