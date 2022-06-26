@@ -25,6 +25,8 @@ width: 100%;
 font-size: 1.5rem;
 padding:.5rem;
 color:${(prop)=>prop.theme.colors.black};
+background:${(prop)=>prop.theme.colors.bg};
+margin-bottom:.5rem;
 
 `
 export const Details = styled.div`
@@ -68,18 +70,19 @@ align-items: flex-start;
  }
 `
 export const Related = styled.div`
- overflow:hidden;
+ overflow:auto;
  display:flex;
  justify-content:flex-start;
  padding:1rem .5rem;
- border-radius:.5rem;
+ border-radius:.3rem;
  margin:1rem 0;
- background-color:${(prop)=>prop.theme.colors.bg};
+ 
  img {
-     margin-right:.5rem;
+     margin-right:1rem;
      width:100%;
-     height:50px;
+     height:60px;
      border-radius:.3rem;
+     background-color:${(prop)=>prop.theme.colors.bg};
  }
 `
 export const Description = styled.div`
@@ -110,7 +113,7 @@ button {
     flex:2;
     
     border-radius:.3rem;
-    padding: .2rem .4rem;
+    padding:  .4rem;
     display:flex;
     justify-content:center;
     align-items:center;

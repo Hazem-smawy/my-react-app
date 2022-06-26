@@ -57,9 +57,11 @@ export const SideBar = styled.div`
         position:relative;
         .theme {
             position:absolute;
-            left:0;
-            top:0;
-            ${DefaultP}
+            left:1.5rem;
+            top:1rem;
+            font-size:1.3rem;
+            color:${(prop)=>prop.theme.colors.p};
+
         }
         h4,h5 {
             font-weight:normal;
