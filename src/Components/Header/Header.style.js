@@ -58,7 +58,7 @@ export const SideBar = styled.div`
         .theme {
             position:absolute;
             right:1.5rem;
-            bottom:3rem;
+            bottom:3.5rem;
             font-size:1.3rem;
             color:${(prop)=>prop.theme.colors.p};
 
@@ -102,9 +102,10 @@ export const SideBar = styled.div`
             font-size:.9rem;
             font-weight:normal;
             margin:1rem .3rem;
+            padding-left:1rem;
             font-family:'m';
             list-style:none;
-          
+            position:relative;
             color:${(prop)=>prop.theme.colors.p};
             
             span {
@@ -117,7 +118,21 @@ export const SideBar = styled.div`
                 bottom:3rem;
                 color:red;
             }
-    
+            &::before {
+                position:absolute;
+                content:'';
+                width:3px;
+                height:100%;
+                left:0;
+                top:0;
+                border-radius:.2rem;
+                display:none;
+                background:${(prop)=>prop.theme.colors.first};
+            }
+            &.active::before {
+                display:block;
+                color:${(prop)=>prop.theme.colors.first};
+            }
             &:hover {
                 color:${(prop)=>prop.theme.colors.first};
             }
