@@ -12,10 +12,7 @@ const Product = () => {
     const {name,description,image,price,rate,like} = cars[3];
   return (
     <Container>
-        <ProductBox>
-        <ImageBox>
-           
-            <Icons>
+         <Icons>
                 <Link to='/'>
                     <span>
                         <FaAngleLeft />
@@ -28,6 +25,10 @@ const Product = () => {
                 </Link>
                
             </Icons>
+        <ProductBox>
+        <ImageBox>
+           
+            
             <img src={image} alt={name} />
         </ImageBox>
         <Details>
