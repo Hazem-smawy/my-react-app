@@ -1,43 +1,62 @@
 import { ItemBox,ItemImage,ItemText,Love,AddIcon } from "./NewItems.style"
-import {MdAdd} from 'react-icons/md'
+import {MdAdd,MdOutlineBookmarkAdded} from 'react-icons/md'
 import {AiOutlineLike,AiOutlineStar} from 'react-icons/ai'
 import {RiHeartFill} from 'react-icons/ri'
+import { IoHeartDislikeSharp } from "react-icons/io5"
 import { Link } from "react-router-dom"
+import {AiOutlineWhatsApp} from 'react-icons/ai'
+
+import { useState } from "react"
 const NewItem = ({item}) => {
-  const {name,image,price ,description,rate,like} = item;
+  const [add,setAdd] = useState(false)
+  const [love,setLove] = useState(false)
+  const {id,name,image,price ,description,rate,like} = item;
   return (
-    <ItemBox>
+    <ItemBox id ={id}>
         <Love>
-          <RiHeartFill />
+          {love ? <IoHeartDislikeSharp onClick={()=>setLove(false)} /> :<RiHeartFill  onClick={()=>setLove(true)} />}
         </Love>
         <ItemImage>
-            <Link to='/product'>
+            <Link to={`/product/${id}`}>
               <img src={image} alt={name} />
             </Link>  
         </ItemImage>
         <ItemText>
-           <div>
-                <h2>{name}</h2>
-                <h3>${price}</h3>
-                <br />
-                <p>{description}</p>
-           </div>
+          <div className='titleAndIcon'>
+            <div className="title">
+                  <h2>{name}</h2>
+                  <h3>${price}</h3>
+                
+            </div>
            
-           <div>
-              <div className='star'>
-                <AiOutlineStar className="icon " />
-                <span>{rate}</span>
-              </div>
-              <div className="like">
-                <AiOutlineLike  className="icon "/>
-                <span>{like}</span>
-              </div>
-           </div>
-           <Link to='/card'>
+            <div className="icons">
+               
+                <div className='star'>
+                  <AiOutlineStar className="icon " />
+                  <span>{rate}</span>
+                </div>
+                <div className="like">
+                  <AiOutlineLike  className="icon "/>
+                  <span>{like}</span>
+                </div>
+                <div className="what">
+                  <AiOutlineWhatsApp  />
+                </div>
+            </div>
+          </div> 
+            
+           
            <AddIcon>
-             <MdAdd />
+           <div>
+                < br />
+                <p>{description}</p>
+                
+            </div>
+            <div  className='addIcon'>
+                { add ? <MdOutlineBookmarkAdded className='added' onClick={()=>setAdd(false)} /> : <MdAdd className='add' onClick={()=>setAdd(true)}/>}
+             </div>
            </AddIcon>
-           </Link>
+         
            
         </ItemText>
     </ItemBox>

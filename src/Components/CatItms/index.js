@@ -4,23 +4,27 @@ import { Link } from 'react-router-dom'
 const Category = () => {
   return (
     <Categories>
-                <CatItem >
-                  <Link to='/products'>
-                    <SiBmw className='active' />
-                  </Link>
-               
-                </CatItem>
+                <Link to='/products'>
+                  <CatItem className='active'>
+                      <SiBmw  />
+                      <span>BMW</span>
+                  </CatItem>
+                </Link>
                 <CatItem >
                   <SiMercedes />
+                  <span>Mercedes</span>
                 </CatItem>
                 <CatItem >
                   <SiTesla />
+                  <span>Tesla</span>
                 </CatItem>
                 <CatItem >
                   <SiToyota />
+                  <span>Toyota</span>
                 </CatItem>
                 <CatItem >
                   <SiRenault />
+                  <span>Renault</span>
                 </CatItem>
               
           </Categories>

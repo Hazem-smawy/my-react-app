@@ -16,7 +16,7 @@ const Main = ({taggleTheme,setTaggleTheme}) => {
              
              <Route path='/' element={<Home taggleTheme={taggleTheme} setTaggleTheme={setTaggleTheme} />} />
              <Route path='products' element={<Products />} />
-             <Route path='product' element={<Product />} />
+             <Route path='product/:id' element={<Product />} />
              <Route path='login' element={<Login />} />
              <Route path='sign' element={<Sign />} />
              <Route path='card' element={<Card />} />

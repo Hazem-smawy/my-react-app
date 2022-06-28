@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import {DefaultBtn,DefaultP,DefaultTitle,DefaultInput} from '../styles/Theme'
+import {device,DefaultBtn,DefaultP,DefaultTitle,DefaultInput} from '../styles/Theme'
 export const FormContainer = styled.div`
 display: grid;
 grid-template-columns: 1fr;
@@ -15,8 +15,14 @@ export const LoginText = styled.div`
         width:50px;
         height:50px;
         border-radius:50%;
+
+        @media (${device.mobile}){
+            width:80px;
+            height:80px;
+        }
     }
     h3 {
+        margin-top:1rem;
         ${DefaultTitle}
     }
     p {
@@ -35,6 +41,11 @@ export const Form = styled.div`
         justify-content:center;
         width:300px;
         font-family:'c';
+
+        @media (${device.mobile}){
+            width:400px;
+            gap:1.5rem;
+        }
         div {
             
             width:100%;
@@ -50,9 +61,10 @@ export const Form = styled.div`
                 width:100%;
                 color:${(prop)=>prop.theme.colors.black};
             }
+
+           
             
         }
-       
         div:last-child {
             display:flex;
             justify-content:center;
@@ -62,6 +74,8 @@ export const Form = styled.div`
                 width:auto;
             }
         }
+       
+      
     }
 `
 
@@ -74,4 +88,8 @@ export const Forget = styled.div`
     p {
         ${DefaultP}
     }
+    @media (${device.mobile}){
+        width:300px;
+    }
+
 `

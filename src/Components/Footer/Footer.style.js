@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { DefaultP, DefaultTitle, Flex,DefaultBox } from '../../styles/Theme'
+import {device, DefaultP, DefaultTitle, Flex,DefaultBox } from '../../styles/Theme'
 export const FooterContainer = styled.div`
 
 width:100%;
@@ -7,11 +7,17 @@ display: grid;
 grid-template-columns: 1fr;
 gap: .5rem;
 
+margin-bottom:2rem;
+
 p {
     ${DefaultP}
 }
 h4 {
    ${DefaultTitle}
+}
+
+@media (${device.mobile}){
+    margin:1rem 0 2rem;
 }
 `
 export const LinkBox = styled.div`
@@ -23,6 +29,11 @@ padding:1rem ;
 display: grid;
 grid-template-columns: 1fr;
 gap: 1rem;
+
+@media(${device.mobile}){
+    grid-template-columns:2fr 1fr 1fr ;
+    gap:1.5rem;
+ }
 `
 export const Info = styled.div`
     display:flex;
@@ -33,6 +44,11 @@ export const Info = styled.div`
         margin-right:1rem;
         border-radius:50%;
     }
+    @media(${device.mobile}){
+        h4 {
+            margin-bottom:.5rem;
+        }
+     }
 `
 export const Media = styled.div`
 
@@ -46,7 +62,7 @@ export const Media = styled.div`
     }
 
     .social {
-        font-size:
+        font-size:1.2;
         margin-top:.6rem;
         color:${(prop)=>prop.theme.colors.p};
         & > * {
@@ -70,4 +86,7 @@ export const CopyRight = styled.div`
     p {
         margin-right:.5rem;
     }
+    @media(${device.mobile}){
+        margin:.5rem;
+     }
 `

@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Flex ,DefaultBox, DefaultBtn} from '../styles/Theme'
+import {device, Flex ,DefaultBox, DefaultBtn} from '../styles/Theme'
 export const CardContainer = styled.div`
 padding:1rem 0;
 display:grid;
@@ -7,6 +7,14 @@ grid-template-columns:1fr;
 grid-auto-rows:1fr;
 width:100%;
 gap:1rem;
+
+@media (${device.mobile}){
+    grid-template-columns:repeat(2,1fr);  
+}
+@media (${device.labtop}){
+    grid-template-columns:repeat(3,1fr);
+    gap:2rem;  
+}
 `
 export const CardItemContainer = styled.div`
 background:${(prop)=>prop.theme.colors.boxSecond};
@@ -50,7 +58,7 @@ div {
     font-familly:'c';
     display:flex;
     width:100%;
-    
+    margin-top:.5rem;
 
     span {
        
@@ -93,6 +101,10 @@ export const CardSummary = styled.div`
     padding:1rem;
     border-radius:.5rem;
     ${DefaultBox}
+
+    @media (${device.mobile}){
+        max-width:50%; 
+    }
     color:${(prop)=>prop.theme.colors.black};
     div {
         display:flex;

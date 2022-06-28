@@ -1,4 +1,4 @@
-import {Bollets,SlidersBox,FirstCol,Sliders,SlidersBtn} from './Slide.style'
+import {Bollets,Bollet,SlidersBox,FirstCol,Sliders,SlidersBtn} from './Slide.style'
 import {SlideData} from '../../data'
 import SlideItem from './SlideItem'
 import { Link } from 'react-router-dom'
@@ -14,6 +14,11 @@ const SlideShow = () => {
   }
   const prevSlide = ()=>{
     pos > 0 ? setPos(pos - 1): setPos(data.length - 1);
+  }
+  const setOrder=(i)=>{
+   
+    if(i)
+    setPos(i);
   }
   return (
     <SlidersBox>
@@ -46,11 +51,11 @@ const SlideShow = () => {
               
               <Bollets>
                {data.map((e,i)=>(
-                 <li key={i} className={pos === i  ?"active":''}
+                 <Bollet order={pos == i ? 5:i+ 1} img={e.image} key={i} className={pos === i  ?"active":''}
                       onClick={()=>setPos(i)}
                  >
 
-                 </li>
+                 </Bollet>
                ))}
               </Bollets>
             </Sliders>

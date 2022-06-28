@@ -1,5 +1,11 @@
-import styled from 'styled-components'
-import {DefaultBtn,DefaultBox, DefaultSupTitle, DefaultP} from '../../styles/Theme'
+import styled, { css, keyframes } from 'styled-components'
+import {device,DefaultBtn,DefaultBox, DefaultSupTitle, DefaultP} from '../../styles/Theme'
+const slideAnimate = keyframes`
+0%{transform:scale(.9)}
+100%{transform:scale(1)}
+
+`
+
 export const SlidersBox = styled.div`
 margin: 1rem 0 1rem;
 border-radius: .5rem;
@@ -7,6 +13,15 @@ display: grid;
 gap:.5rem;
 grid-template-columns: 50px 1fr;
 height:250px;
+
+@media(${device.mobile}){
+    grid-template-columns: 70px 1fr;
+    height:400px;
+    gap:1rem;
+}
+@media(${device.labtop}){
+    height:650px;
+}
 
 `
 export const FirstCol = styled.div`
@@ -34,8 +49,8 @@ div {
 
         &::before {
             content: '';
-            height: 5px;
-            width: 21px;
+            height: 4px;
+            width: 16px;
             position: absolute;
             background: #a0a0ac;
             bottom: 0;
@@ -52,12 +67,25 @@ div {
 export const Sliders = styled.div`
 position:relative;
  height:255px;
+
  width:100%;
  border-radius: 0.7rem;
  ${DefaultBox}
  display: grid;
  grid-template-rows: 1fr 20px;
+ animation:${slideAnimate} .3s ;
 
+ @media(${device.mobile}){
+    height:400px;
+    grid-template-rows: 1fr 40px;
+}
+@media(${device.labtop}){
+    height:650px;
+    grid-template-rows: 1fr;
+    background:transparent;
+    overflow:hidden;
+    
+}
  
 
 `
@@ -70,7 +98,6 @@ export const SlidersBtn = styled.div`
     display:flex;
     justify-content:space-between;
     z-index:5;
-    
     .right,.left  {
         font-size:1.3rem;
         margin:0 .5rem;
@@ -78,9 +105,20 @@ export const SlidersBtn = styled.div`
         background:#ffffff54;
         border-radius:50%;
         color:${(prop)=>prop.theme.colors.black};
-        .right:hover,.left:hover {
-            color:${(prop)=>prop.theme.colors.first};
+        &:hover {
+            color:${(prop)=>prop.theme.colors.white};
+            background:${(prop)=>prop.theme.colors.black};
         }
+
+        @media(${device.mobile}){
+            margin: 0 1.2rem;
+            padding:.2rem;
+            font-size:1.5rem;
+        }
+        @media(${device.labtop}){
+            font-size:2rem;
+        }
+       
     }
    
 `
@@ -97,30 +135,93 @@ width:100%;
 height:100%;
 border-radius: 0.7rem;
 overflow:hidden;
+animation:${slideAnimate} .3s ;
+transition:all .3s cubic-bezier(0.23, 0.13, 0.33, 1);
 img {
     border-radius: 0.7rem;
     max-hieght:100%;
     width:100%;
     ${DefaultBox}
+   
+    transition:all .3s cubic-bezier(0.23, 0.13, 0.33, 1);
 }
 
 `
+const BulletAnimateActive = keyframes`
+0%{order:1 ;}
+100%{order:4}
+
+`
+
+const animation=css`
+    animation:${BulletAnimateActive} 1s;
+    animation-fill-mode: forwards;
+
+`
+
 export const Bollets = styled.div`
  display:flex;
  justify-content:center;
  margin-top:6px;
-    li {
-        list-style:none;
-        height: 5px;
-        width: 9px;
-        background: #a0a0ac;
-        border-radius: 0.5rem;
-        margin-left:5px;
-    }
-    li.active {
+ position:relative;
+ @media (${device.mobile}){
+     align-items:center;
+ }
+@media(${device.labtop}){
+    position: absolute;
+    right: 0;
+    bottom: 1rem;
+}
+ 
+
+   
+`
+export const Bollet = styled.li`
+
+list-style:none;
+height: 5px;
+width: 9px;
+background: #a0a0ac;
+border-radius: 0.5rem;
+margin-left:5px;
+
+
+transition:all .5s;
+
+    &.active {
+        
         width: 21px;
         background:${(prop)=>prop.theme.colors.first};
     }
+
+    @media (${device.labtop}){
+        
+        transform-origin: center;
+       
+        
+       
+        bottom:0;
+        height:100px;
+        width:150px;
+        background-image:url(${(prop)=>prop.img});
+        background-size: cover;
+        background-position: center;
+        transition:all .5s;
+       
+        &.active {
+           
+            transition:all 1s;
+            height:100px;
+            width:150px;
+            background-image:url(${(prop)=>prop.img}) ;
+            background-size: cover;
+            background-position: center;
+        }
+      
+    }
+      
+    }
+
 `
 export const TextBox = styled.div`
 ${DefaultBox}
@@ -138,23 +239,48 @@ justify-content: space-between;
 align-items: center;
 gap:.4rem;
 
+
+
+@media(${device.mobile}){
+   width:70%;
+   gap:1rem;
+   bottom:.5rem;
+   height: auto;
+   border-radius: 0.5rem;
+}
+
+@media(${device.labtop}){
+    display:flex;
+    flex-direction:column;
+    width:50%;
+    height: fit-content;
+    border-radius: .7rem;
+    left: 5%;
+    top:50%;
+    transform: translateY(-50%);
+    justify-content:flex-start;
+    align-items:flex-start;
+    padding:2rem;
+    background:#ebdedec2;
+
+ 
+}
 button {
     ${DefaultBtn}
     width:fit-content;
     padding:.5rem;
     border-radius:.4rem;
-    white-space:nowrap;
+    @media(${device.labtop}){
+            min-width:30%;
+    }
 }
 div {
     text-align:left;
     h3 {
         ${DefaultSupTitle}
-        font-size:1rem;
-        
     }
      p {
         ${DefaultP}
-        font-size:.8rem;
     }
 }
 

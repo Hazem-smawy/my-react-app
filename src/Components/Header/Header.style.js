@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import {DefaultP, Flex,DefaultBtn,DefaultBox } from '../../styles/Theme'
+import {device, Flex,DefaultBtn,DefaultBox, DefaultTitle, DefaultP, DefaultSupTitle, DefaultSupSecond, DefaultBoxIcon } from '../../styles/Theme'
 
 export const HeaderContent = styled.header`
     display:flex;
@@ -7,8 +7,8 @@ export const HeaderContent = styled.header`
     align-items:center;
     padding:1rem;
     margin:0rem .3rem 1rem;
-    color:${(prop)=>prop.theme.colors.black};
-    font-size:1.3rem;
+    ${DefaultTitle}
+   
     
 `
 export const Logo = styled.div`
@@ -16,7 +16,16 @@ padding: 0.5rem;
 border-radius: 0.3rem;
 width: 40px;
 height: 40px;
-${DefaultBox}
+${DefaultBoxIcon}
+${Flex}
+    @media(${device.mobile}){
+        width: 50px;
+        height: 50px;
+        
+    }
+    @media(${device.labtop}){
+        margin-right:1rem;
+    }
 
 `
 export const App = styled.nav`
@@ -25,9 +34,18 @@ export const App = styled.nav`
     background-color: #eee;
     width: 40px;
     height: 40px;
-    ${DefaultBox}
+    ${DefaultBoxIcon}
 
     .open {
+        display:none;
+    }
+
+    ${Flex}
+    @media(${device.mobile}){
+        width: 50px;
+        height: 50px;
+    }
+    @media(${device.labtop}){
         display:none;
     }
 
@@ -38,6 +56,12 @@ export const SideBar = styled.div`
         width:65%;
         height:100vh;
         opacity:1;
+
+        @media(${device.mobile}){
+            width: 40%;
+            
+        }
+       
     }
     opacity:0;
     overflow:hidden;
@@ -49,92 +73,188 @@ export const SideBar = styled.div`
     border-radius:1rem;
     z-index:2;
     ${DefaultBox}
+
+    @media(${device.labtop}){
+        height:auto;
+        width:auto;
+        opacity:1;
+        position:static;
+        flex:1;
+        background:transparent;
+        box-shadow:none;
+        .dIcon {
+            display:none;
+        }
+     }
     
     ul {
         padding:1.5rem;
         width:100%;
         height:100%;
         position:relative;
-        .theme {
-            position:absolute;
-            right:1.5rem;
-            bottom:3.8rem;
-            font-size:1.3rem;
-            color:${(prop)=>prop.theme.colors.p};
-
+        
+        @media(${device.mobile}){
+                display:flex;
         }
-        h4,h5 {
-            font-weight:normal;
-        }
+        
+        @media(${device.labtop}){
+           display:flex;
+           justify-content:space-around;
+           align-items:center;
+           padding:0;
+         }
 
         
         .user {
             display:flex;
             margin:2rem 0 1rem;
             align-items:center;
+
+            @media(${device.mobile}){
+                display:none;
+            }
             img {
                 width:40px;
                 height:40px;
                 border-radius:50%;
+
+                @media(${device.mobile}){
+                    width: 60px;
+                    height: 60px;
+                }
     
             }
+          
     
             div {
                 flex:1;
                 font-family:'c';
                 margin-left:1rem;
-    
+
+                @media(${device.mobile}){
+                    display:none;
+                }
                
                 h4 {
-                    font-size:1.2rem;
-                    color:${(prop)=>prop.theme.colors.black};
+                   ${DefaultSupTitle}
+                   font-size:1.1rem;
                 }
                 p {
-                    margin-top:-.3rem;
-                    font-size:.8rem;
-                    color:${(prop)=>prop.theme.colors.p};
+                   ${DefaultP}
+                    
                 }
             }
         }
         li {
             ${Flex}
             justify-content:flex-start;
-            font-size:.9rem;
-            font-weight:normal;
+           ${DefaultP}
             margin:1rem .3rem;
-            font-family:'m';
             list-style:none;
             position:relative;
-            color:${(prop)=>prop.theme.colors.p};
-            
+         
+          
+            .link {
+                width:100%;
+                display:flex;
+                align-items:center;
+                justify-content:flex-start;
+  
+                @media (${device.labtop}){
+                    padding:.5rem;
+                 }
+            }
+            .active {
+                color:${(prop)=>prop.theme.colors.first};
+            }
+            .active::before {
+                position: absolute;
+                content: '';
+                width: 2px;
+                height: 50%;
+                left: -0.8rem;
+                top: 50%;
+                border-radius: 0.2rem;
+                transform: translateY(-50%);
+                background:${(prop)=>prop.theme.colors.first};
+
+                @media (${device.labtop}){
+                    width: 50px;
+                    height: 3px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    top: 100%;
+                    bottom: -1rem;
+                }
+            }
             span {
                 margin-left:.5rem;
             }
     
-            &.logOut {
+            &.logOutTheme {
                 position:absolute;
-
+                ${Flex}
+                justify-content:space-between;
                 bottom:3rem;
-                color:red;
+                width:75%;
+
+                @media(${device.mobile}){
+                    width:auto;
+                    position:static;
+                    flex-direction: row-reverse;
+                    justify-content:space-around;
+                    
+                   .logOut ,.theme {
+                        padding:.5rem;
+                        font-size:1.4rem;
+                   }
+                   
+                    span {
+                        display:none;
+                    }
+                }
+                .logOut {
+                    color:red;
+                    ${Flex}
+                    @media (${device.labtop}){
+                        border-radius:.5rem;
+                        
+                        color:${(prop)=>prop.theme.colors.black};
+                    }
+                 
+                }
+
+                .theme {
+                    padding:.1rem .5rem;
+                    border-radius:.4rem;
+                    background:${(prop)=>prop.theme.colors.bg};
+                   
+                    ${DefaultP}
+
+                    @media (${device.labtop}){
+                        margin-right:2rem;
+                        font-size:1.3rem;
+                        padding:.5rem;
+                        border-radius:.5rem;
+                        background:${(prop)=>prop.theme.colors.black};
+                        color:${(prop)=>prop.theme.colors.white};
+                    }
+                    p {
+                        ${Flex}
+                    }
+                    &:hover {
+                        background:${(prop)=>prop.theme.colors.black};
+                        color:${(prop)=>prop.theme.colors.white};
+                    }
+                }
             }
-            &::before {
-                position:absolute;
-                content:'';
-                width:3px;
-                height:100%;
-                left:0;
-                top:0;
-                border-radius:.2rem;
-                display:none;
-                background:${(prop)=>prop.theme.colors.first};
-            }
-            &.active::before {
-                display:block;
-                color:${(prop)=>prop.theme.colors.first};
-            }
+           
             &:hover {
                 color:${(prop)=>prop.theme.colors.first};
             }
+            
+           
+           
         }
     
         .fav {
@@ -142,29 +262,45 @@ export const SideBar = styled.div`
                 background-color:${(prop)=>prop.theme.colors.white};
                 border-radius:1rem;
                 padding:1rem .5rem 2rem;
-                font-family:'g';
+                font-family:'m';
 
+                @media(${device.mobile}){
+                    padding:0;
+                }
+                @media(${device.labtop}){
+                   padding:0;
+                   positin:static;
+                   background-color: transparent;
+                 }
+                
                 div {
                     margin-top:1rem;
                     display:flex;
                     align-items:center;
         
+                    @media(${device.mobile}){
+                        display:none;
+                    }
+                    
                     img {
                         width:30px;
                         height:30px;
                         border-radius:50%;
                         margin-right:.5rem;
+                        
+                        @media (${device.mobile}){
+                            width:40px;
+                            height:40px;
+                        }
                     }
                     h5 {
                         flex:1;
-                        font-size:.9rem;
-                        color:${(prop)=>prop.theme.colors.black};
+                        ${DefaultSupSecond}
                     }
                 }
                 button {
                     ${DefaultBtn}
                     ${Flex}
-                    font-family:'c';
                     padding:.5rem .7rem;
                     border-radius:.5rem;    
                     position:absolute;
@@ -176,7 +312,22 @@ export const SideBar = styled.div`
                     }
                     span {
                         margin-right:.2rem;
+
+                        @media(${device.labtop}){
+                          display:block;
+                         }
                     }
+
+                    @media(${device.labtop}){
+                        bottom:auto;
+                        left:auto;
+                        position:static;
+                        transform:translateX(0);
+                        padding:.5rem;
+                        background:${(prop)=>prop.theme.colors.boxSecond};
+                        color:${(prop)=>prop.theme.colors.supTitle}
+
+                     }
                 }
             }
    

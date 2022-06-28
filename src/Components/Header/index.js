@@ -12,7 +12,7 @@ import {IoMdClose} from 'react-icons/io'
 import {FaFirefox,FaSun} from 'react-icons/fa'
 import {CgMenuRight} from 'react-icons/cg'
 import {BiMoon} from 'react-icons/bi'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 const Header = ({taggleTheme,setTaggleTheme,isClose,setIsClose}) => {
   return (
     <HeaderContent>
@@ -23,70 +23,85 @@ const Header = ({taggleTheme,setTaggleTheme,isClose,setIsClose}) => {
            
              <CgMenuRight className={ isClose && 'open'} onClick={()=> setIsClose(true) } />
              <IoMdClose className={ !isClose && 'open'}  onClick={()=> setIsClose(false)} />
-           
-            <SideBar className={ isClose ?'active':''} >
-                <ul>
-                    {taggleTheme ? <FaSun className='theme' onClick={()=>setTaggleTheme(false)}  />:<BiMoon className='theme' onClick={()=>setTaggleTheme(true)} />}
-                    <div className='user'>
-                        <img src={Img} alt="car"/>
-                        <div>
-                            <h4>User Name</h4>
-                            <p>hazemsmawy@gmail.com</p>
-                        </div>
+        </App>
+        <SideBar className={ isClose ?'active':''} >
+            <ul>
+                
+                <div className='user'>
+                    <img src={Img} alt="car"/>
+                    <div>
+                        <h4>User Name</h4>
+                        <p>hazemsmawy@gmail.com</p>
                     </div>
-                    <li>
-                     <Link to='/'>
-                        <GoHome />
-                        <span>Home</span>
-                     </Link>
-                    </li>
-                    <li>
-                      <Link to='/card'>
-                        <AiOutlineCreditCard />
-                        <span>card</span>
-                      </Link>
-                    </li>
-                    <li>
-                        <MdElectricCar />
-                        <span>new</span>
-                    </li>
-                    <li>
-                        <Link to='/login'>
-                            <MdLogin />
-                            <span>log in</span>
-                        </Link>
-                    </li>
-                    <li>
-                        <GiSettingsKnobs />
-                        <span>settings</span>
-                    </li>
-                    <div className='fav'>
-                       <div>
-                           <img src={Img1} alt="car"/>
-                           <h5>Mercedes</h5>
-                       </div>
-                       <div>
-                           <img src={Img2} alt="car"/>
-                           <h5> BMW</h5>
-                       </div>
-                       <div>
-                           <img src={Img3} alt="car"/>
-                           <h5>Tesla</h5>
-                       </div>
+                </div>
+                <li>
+                    <NavLink className={({isActive})=> isActive ? "link active" : 'link'}  to='/'>
+                    <GoHome className='dIcon' />
+                    <span>Home</span>
+                    </NavLink>
+                </li>
+                <li>
+                    <NavLink className={({isActive})=> isActive ? "link active" : 'link'}   to='/card'>
+                    <AiOutlineCreditCard className='dIcon' />
+                    <span>card</span>
+                    </NavLink>
+                </li>
+                <li>
+                    <MdElectricCar  className='dIcon'/>
+                    <span>new</span>
+                </li>
+                <li>
+                    <NavLink className={({isActive})=> isActive ? "link active" : 'link'}   to='/login'>
+                        <MdLogin  className='dIcon' />
+                        <span>log in</span>
+                    </NavLink>
+                </li>
+                <li>
+                    <GiSettingsKnobs  className='dIcon' />
+                    <span>settings</span>
+                </li>
+                <div className='fav'>
+                    <div>
+                        <img src={Img1} alt="car"/>
+                        <h5>Mercedes</h5>
+                    </div>
+                    <div>
+                        <img src={Img2} alt="car"/>
+                        <h5> BMW</h5>
+                    </div>
+                    <div>
+                        <img src={Img3} alt="car"/>
+                        <h5>Tesla</h5>
+                    </div>
 
-                       <button>
-                           <MdAdd className='icon' />
-                           <span>addproduct</span>
-                       </button>
-                    </div>
-                    <li className='logOut'>
+                    <button>
+                        <MdAdd className='icon' />
+                        <span>add product</span>
+                    </button>
+                </div>
+                <li className='logOutTheme'>
+                    
+                    <NavLink className='logOut' to='/login'>
                         <MdLogout />
                         <span>log out</span>
-                    </li>
+                    </NavLink>
+                    <div className='theme'>
+                        {taggleTheme 
+                            ? <p onClick={()=>setTaggleTheme(false)} >
+                                <FaSun  /><span>light</span>
+                            </p>
+                            : <p onClick={()=>setTaggleTheme(true)}>
+                                <BiMoon />
+                                <span>dark</span>
+                            </p>
+                        }
+                        
+                    </div>
+                </li>
 
-                </ul>
-            </SideBar>
-        </App>
+            </ul>
+        </SideBar>
+        
     </HeaderContent>
   )
 }

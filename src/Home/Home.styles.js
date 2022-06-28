@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { DefaultP,DefaultTitle ,DefaultSupTitle} from '../styles/Theme'
+import {device, DefaultP,DefaultTitle ,DefaultSupTitle} from '../styles/Theme'
 export const Container = styled.div`
     margin:0 auto;   
     width:90vw;
@@ -10,23 +10,34 @@ export const Container = styled.div`
         filter: blur(3px);
         opacity: .8;
     }
+
+    @media(${device.mobile}){
+        padding:0 1rem 0;
+    }
 `
 export const TextTitle = styled.div`
    
     margin-bottom:1rem;
-        h2 {
-            ${DefaultTitle}
-        }
-        p {
-            ${DefaultP}
-            margin-top:-.3rem;
-            margin-left:.5rem;
-        }
+    h2 {
+        ${DefaultTitle}
+    }
+    p {
+        ${DefaultP}
+        margin-top:-.3rem;
+        margin-left:.5rem;
+    }
+
+    @media(${device.mobile}){
+        margin:1rem 0;
+    }
 
 `
 export const NewData = styled.div`
 h3 {
     ${DefaultSupTitle}
-    margin-bottom:1rem;
+    margin:1rem 0;
+}
+@media(${device.mobile}){
+    margin:2rem 0;
 }
 `
