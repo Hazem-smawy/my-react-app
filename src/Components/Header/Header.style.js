@@ -93,9 +93,7 @@ export const SideBar = styled.div`
         height:100%;
         position:relative;
         
-        @media(${device.mobile}){
-                display:flex;
-        }
+        
         
         @media(${device.labtop}){
            display:flex;
@@ -110,7 +108,7 @@ export const SideBar = styled.div`
             margin:2rem 0 1rem;
             align-items:center;
 
-            @media(${device.mobile}){
+            @media(${device.labtop}){
                 display:none;
             }
             img {
@@ -131,7 +129,7 @@ export const SideBar = styled.div`
                 font-family:'c';
                 margin-left:1rem;
 
-                @media(${device.mobile}){
+                @media(${device.labtop}){
                     display:none;
                 }
                
@@ -198,7 +196,7 @@ export const SideBar = styled.div`
                 bottom:3rem;
                 width:75%;
 
-                @media(${device.mobile}){
+                @media(${device.labtop}){
                     width:auto;
                     position:static;
                     flex-direction: row-reverse;
@@ -264,9 +262,7 @@ export const SideBar = styled.div`
                 padding:1rem .5rem 2rem;
                 font-family:'m';
 
-                @media(${device.mobile}){
-                    padding:0;
-                }
+                
                 @media(${device.labtop}){
                    padding:0;
                    positin:static;
@@ -278,7 +274,7 @@ export const SideBar = styled.div`
                     display:flex;
                     align-items:center;
         
-                    @media(${device.mobile}){
+                    @media(${device.labtop}){
                         display:none;
                     }
                     
