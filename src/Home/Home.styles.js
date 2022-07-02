@@ -3,6 +3,7 @@ import {device, DefaultP,DefaultTitle ,DefaultSupTitle} from '../styles/Theme'
 export const Container = styled.div`
     margin:0 auto;   
     width:90vw;
+    max-width:1300px;
     padding:0 .5rem 0;
     background:${(prop)=>prop.theme.colors.bg};
     
@@ -29,6 +30,9 @@ export const TextTitle = styled.div`
 
     @media(${device.mobile}){
         margin:1rem 0;
+    }
+    @media(${device.mobile}){
+       display:none;
     }
 
 `

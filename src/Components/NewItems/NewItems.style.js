@@ -1,7 +1,19 @@
-import styled from 'styled-components'
+import styled ,{keyframes,css} from 'styled-components'
 import {device,DefaultBox, DefaultP} from '../../styles/Theme'
 
+const scaleSlide = (i,f)=>keyframes`
+0%{
+    transform: scale(.95);
+}
+100%{
+    transform:scale(1);
+ 
+}
 
+`
+const scaleAnimation = css`
+animation:${scaleSlide} .5s linear;
+`
 export const  ItemsContainer = styled.div`
 column-count: 1;
 column-gap: 1rem;
@@ -27,9 +39,12 @@ export const ItemBox = styled.div`
  ${DefaultBox}
  margin-bottom:1rem;
 
- @media(${device.mobile}){
-   margin-bottom:1.5rem;
-}
+   @media(${device.mobile}){
+      margin-bottom:1.5rem;
+   }
+   &:hover {
+      ${scaleAnimation}
+   }
 
 
  `

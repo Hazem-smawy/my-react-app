@@ -7,20 +7,31 @@ import  SlideShow  from '../Components/SlideBox/SlideShow'
 import Footer from '../Components/Footer/Footer'
 import {useState} from 'react'
 import {cars} from '../data'
+import SlideLabtop from '../Components/SlideLabtop/SlideLabtop'
 const Home = ({taggleTheme,setTaggleTheme}) => {
   const [closeSideBar,setCloseSideBar]= useState(false);
  
   return (
     <>
-       <Header taggleTheme={taggleTheme} setTaggleTheme={setTaggleTheme} isClose={closeSideBar} setIsClose={setCloseSideBar} />
+        <Header className='phone' taggleTheme={taggleTheme} setTaggleTheme={setTaggleTheme} isClose={closeSideBar} setIsClose={setCloseSideBar} />
+        <div className='labtop'>
+            <Header taggleTheme={taggleTheme} setTaggleTheme={setTaggleTheme} isClose={closeSideBar} setIsClose={setCloseSideBar} />
+            <SlideLabtop />
+           
+            <Category /> 
+        </div>
         <Container onClick={()=> closeSideBar  && setCloseSideBar(false)}
           className={closeSideBar ? "active":" "}>
+            <div className='phone'>
+         
+
+            <Category /> 
+            </div>
           
           <TextTitle>
             <h2>Descover</h2>
             <p>All Your Fav is Here</p>
           </TextTitle> 
-          <Category /> 
           <SlideShow />
           <NewData>
             <h3>new cars</h3>

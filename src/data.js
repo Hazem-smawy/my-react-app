@@ -21,10 +21,10 @@ export  const cars = [
     {id:9,name:'Audi',description:'The fastes car in this word i can drive it to 240 k/h',image:Image9,price:140,rate:3.3,like:50},
 ];
 
-export const SlideData = [
-    {id:1,name:'Honday',image:Image5,description:'this the short description'},
-    {id:2,name:'Ferary',image:Image6,description:'this the short description'},
-    {id:3,name:'BMW',image:Image7,description:'this the short description'},
-    {id:4,name:'Audi',image:Image8,description:'this the short description'},
+export let SlideData = [
+    {id:1,name:'Honday',rate:4.3,like:500,image:Image5,description:'this the short description'},
+    {id:2,name:'Ferary',rate:4.3,like:500,image:Image6,description:'this the short description'},
+    {id:3,name:'BMW',rate:4.3,like:500,image:Image7,description:'this the short description'},
+    {id:4,name:'Audi',rate:4.3,like:500,image:Image8,description:'this the short description'},
 
 ]

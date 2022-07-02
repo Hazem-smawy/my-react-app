@@ -4,19 +4,26 @@ export const Categories = styled.div`
     hieght:60px;
     display:flex;
     justify-content:space-between;
-
+    margin:1rem 0;
     span {
         display:none;
     }
     @media(${device.mobile}){
        justify-content:flex-start;
+       
     }
 
     @media(${device.labtop}){
-        height:50px;
-        span {
-            display:block;
-        }
+        position: absolute;
+        flex-direction: column;
+        left: 2rem;
+        top: 0;
+        margin-top: 2rem;
+        width: 100px;
+        height: 400px;
+        justify-content: space-between;
+        
+      
     }
     
 `
@@ -35,14 +42,12 @@ export const CatItem = styled.div`
       
 
         @media(${device.mobile}){
-            width: 60px;
-            height: 60px;
+          
             font-size:1.6rem;
             margin-right:2rem;
         }
         @media(${device.labtop}){
-            height:auto;
-            width:fit-content;
+           
             ${DefaultSupTitle}
             padding:.5rem 1rem;
 

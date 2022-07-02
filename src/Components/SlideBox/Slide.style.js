@@ -21,6 +21,7 @@ height:250px;
 }
 @media(${device.labtop}){
     height:650px;
+    display:none;
 }
 
 `
@@ -209,7 +210,7 @@ transition:all .5s;
         transition:all .5s;
        
         &.active {
-           
+            border: 2px solid #f3f3e3;
             transition:all 1s;
             height:100px;
             width:150px;
@@ -255,13 +256,13 @@ gap:.4rem;
     width:50%;
     height: fit-content;
     border-radius: .7rem;
-    left: 5%;
-    top:50%;
+    left: 1%;
+    top: 66%;
     transform: translateY(-50%);
     justify-content:flex-start;
     align-items:flex-start;
     padding:2rem;
-    background:#ebdedec2;
+    background:${(prop)=>prop.theme.colors.colorOpacity};
 
  
 }

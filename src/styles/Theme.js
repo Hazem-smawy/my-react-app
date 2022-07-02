@@ -11,6 +11,18 @@ export const GlobalStyle = createGlobalStyle`
 body {
     background:${(prop)=>prop.theme.colors.bg};
 }
+.labtop {
+    display:none;
+}
+@media (${device.labtop}){
+    .phone {
+        display:none;
+    }
+    .labtop {
+        display:block;
+    }
+}
+
 `
 
 
@@ -40,7 +52,8 @@ const light={
         like:'#4f48ec',
         love:'#c81d4c',
         SubBox:'#f2f2f2',
-        firstHover:'#7c061f'
+        firstHover:'#7c061f',
+        colorOpacity:'#00000078'
 
     },
    fonts
@@ -59,7 +72,8 @@ const dark={
         like:'#4f48ec',
         love:'#c81d4c',
         SubBox:'#0f3754',
-        firstHover:'#ddfe99'
+        firstHover:'#ddfe99',
+        colorOpacity:'#00000078'
     },
     fonts
 }
@@ -115,6 +129,7 @@ font-family:'c';
 
 
 export const DefaultBtn = css`
+font-family:'m';
 border:none;
 outline:none;
 background:${(prop)=>prop.theme.colors.first};

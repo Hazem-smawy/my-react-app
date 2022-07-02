@@ -23,6 +23,12 @@ export const ProductBox = styled.div`
         background:${(prop)=>prop.theme.colors.boxSecond};
         border-radius:1rem;
     }
+    @media(${device.labtop}){
+        display: grid;
+        border-radius: 1rem;
+        grid-template-columns: 1fr 1fr;
+        padding:0;
+    }
    
   
 `
@@ -72,8 +78,9 @@ padding:0 1rem 2rem;
 ${DefaultBox}
 border-bottom-right-radius: 1rem;
 border-bottom-left-radius: 1rem;
-@media(${device.mobile}){
- 
+@media(${device.labtop}){
+    padding:0;
+    margin: 0 1rem;
 }
 `
 export const NameLove = styled.div`
@@ -119,13 +126,17 @@ export const Related = styled.div`
  padding:1rem .5rem;
  border-radius:.3rem;
  margin:1rem 0;
- background-color:${(prop)=>prop.theme.colors.bg};
+
  @media(${device.mobile}){
     display: grid;
-    grid-template-columns: repeat(3,1fr) ;
+    grid-template-columns: repeat(4,1fr) ;
     gap:1rem;
     overflow:hidden;
   }
+  @media(${device.labtop}){
+
+    grid-template-columns: repeat(5,1fr) ;
+}
  img {
    
    
@@ -165,6 +176,14 @@ padding: 1.5rem;
         justify-content:space-around;
         background-color:${(prop)=>prop.theme.colors.bg};
         max-width:85%;
+        left:50%;
+        transform:translateX(-50%);
+        border-radius:1rem;
+    } 
+    @media(${device.mobile}){
+        justify-content:space-around;
+        background-color:${(prop)=>prop.theme.colors.bg};
+        max-width:50%;
         left:50%;
         transform:translateX(-50%);
         border-radius:1rem;

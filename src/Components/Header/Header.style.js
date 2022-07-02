@@ -5,10 +5,17 @@ export const HeaderContent = styled.header`
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:1rem;
-    margin:0rem .3rem 1rem;
+    margin:1.5rem auto;   
+    width:90vw;
+    padding:0 .5rem 0;
     ${DefaultTitle}
-   
+    @media(${device.labtop}){
+        position:absolute;
+        left:0;
+        top:0;
+        width:100%;
+        height:3rem;
+    }
     
 `
 export const Logo = styled.div`
@@ -94,7 +101,7 @@ export const SideBar = styled.div`
         position:relative;
         
         @media(${device.mobile}){
-                display:flex;
+                
         }
         
         @media(${device.labtop}){
@@ -110,7 +117,7 @@ export const SideBar = styled.div`
             margin:2rem 0 1rem;
             align-items:center;
 
-            @media(${device.mobile}){
+            @media(${device.labtop}){
                 display:none;
             }
             img {
@@ -131,7 +138,7 @@ export const SideBar = styled.div`
                 font-family:'c';
                 margin-left:1rem;
 
-                @media(${device.mobile}){
+                @media(${device.labtop}){
                     display:none;
                 }
                
@@ -179,12 +186,12 @@ export const SideBar = styled.div`
                 background:${(prop)=>prop.theme.colors.first};
 
                 @media (${device.labtop}){
-                    width: 50px;
-                    height: 3px;
+                    width: 29px;
+                    height: 1px;
                     left: 50%;
                     transform: translateX(-50%);
-                    top: 100%;
-                    bottom: -1rem;
+                    top: 86%;
+                    bottom: 9rem;
                 }
             }
             span {
@@ -198,7 +205,7 @@ export const SideBar = styled.div`
                 bottom:3rem;
                 width:75%;
 
-                @media(${device.mobile}){
+                @media(${device.labtop}){
                     width:auto;
                     position:static;
                     flex-direction: row-reverse;
@@ -264,9 +271,7 @@ export const SideBar = styled.div`
                 padding:1rem .5rem 2rem;
                 font-family:'m';
 
-                @media(${device.mobile}){
-                    padding:0;
-                }
+               
                 @media(${device.labtop}){
                    padding:0;
                    positin:static;
@@ -278,7 +283,7 @@ export const SideBar = styled.div`
                     display:flex;
                     align-items:center;
         
-                    @media(${device.mobile}){
+                    @media(${device.labtop}){
                         display:none;
                     }
                     
