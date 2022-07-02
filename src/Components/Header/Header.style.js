@@ -100,10 +100,7 @@ export const SideBar = styled.div`
         height:100%;
         position:relative;
         
-        @media(${device.mobile}){
-                
-        }
-        
+       
         @media(${device.labtop}){
            display:flex;
            justify-content:space-around;
@@ -271,7 +268,7 @@ export const SideBar = styled.div`
                 padding:1rem .5rem 2rem;
                 font-family:'m';
 
-               
+                
                 @media(${device.labtop}){
                    padding:0;
                    positin:static;
